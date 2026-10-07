@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.1 Initial Release
-Phase: 4 of 4 (Coherence family + DoD wrap-up) — In progress
-Plan: 04-02 created, awaiting approval
-Status: PLAN created, ready for APPLY
-Last activity: 2026-10-07 — Created .paul/phases/04-coherence/04-02-PLAN.md
+Phase: 4 of 4 (Coherence family + DoD wrap-up) — Applying
+Plan: 04-02 executed (2/2 auto PASS; checkpoint: standalone)
+Status: APPLY complete, ready for UNIFY
+Last activity: 2026-10-07 — Executed 04-02; v0.1.0; integration decision = standalone
 
 Progress:
 - Milestone: [████████▊░] 87%
@@ -29,12 +29,13 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ○        ○     [Plan created, awaiting approval]
+  ✓        ✓        ○     [Applied, ready for UNIFY]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- 2026-10-07: Integration = keep standalone; team gets docs/integration.md + docs/decisions-draft.md; no writes to AtlantisPB (Phase 4)
 - Standalone repo github.com/dobidu/tv30val; targets AtlantisPB checkout via --root (default cwd)
 - V-XML-010: st3- name missing from catalogue = blocking; non-kebab = note (Phase 2)
 - Emit pass results only when check ran with source available (Phase 2)
@@ -53,7 +54,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 ### Blockers/Concerns
 - JSON Schema subset; unsupported keyword → skip (Phase 3)
 - Card ranges F01-F42 expanded; V-MAN-002 omissions group-scoped (Phase 3)
-- Handoff DoD items live in AtlantisPB (README row, decisions.md, npm run check) — need user decision before touching it (plan 04-02)
+- Handoff DoD rows (tools/atlantis README, decisions.md, check:normative script) remain with the team — drafts in docs/
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
@@ -64,8 +65,8 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 04-02 created
-Next action: Approve, then /paul:apply .paul/phases/04-coherence/04-02-PLAN.md
+Stopped at: Plan 04-02 applied
+Next action: /paul:unify .paul/phases/04-coherence/04-02-PLAN.md
 Resume file: .paul/phases/04-coherence/04-02-PLAN.md
 
 ---
