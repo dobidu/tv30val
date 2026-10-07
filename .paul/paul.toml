@@ -15,21 +15,19 @@ status = "in_progress"
 phases = 4
 
 [phase]
-number = 3
-name = "Manifest family"
+number = 4
+name = "Coherence family + DoD"
 status = "not_started"
 plans_completed = 0
 
 [loop]
-position = "APPLY"
-plan = "03-01"
-plan_path = "phases/03-manifest/03-01-PLAN.md"
+position = "IDLE"
 
 [satellite]
 groom = true
 
 [stats]
-total_plans = 3
+total_plans = 4
 total_phases = 4
-completed_phases = 2
+completed_phases = 3
 last_activity = "2026-10-07T00:00:00Z"

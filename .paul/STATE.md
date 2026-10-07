@@ -11,25 +11,25 @@ about: "tv30val"
 See: .paul/PROJECT.md (updated 2026-10-07)
 
 **Core value:** Normative conformance findings with a citable source on every check — missing sources = SKIP, never PASS.
-**Current focus:** v0.1 — Phase 3 (Manifest family)
+**Current focus:** v0.1 — Phase 4 (Coherence family + DoD)
 
 ## Current Position
 
 Milestone: v0.1 Initial Release
-Phase: 3 of 4 (Manifest family) — Applying
-Plan: 03-01 executed (3/3 PASS)
-Status: APPLY complete, ready for UNIFY
-Last activity: 2026-10-07 — Executed 03-01; 46 tests; real repo: 3 should-fix (A03/B01/B02), 1 note, 77 pass
+Phase: 4 of 4 (Coherence family + DoD wrap-up)
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-10-07 — Phase 3 complete (03-01 unified), transitioned to Phase 4
 
 Progress:
-- Milestone: [█████░░░░░] 50%
-- Phase 3: [░░░░░░░░░░] 0%
+- Milestone: [███████▌░░] 75%
+- Phase 4: [░░░░░░░░░░] 0%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [Applied, ready for UNIFY]
+  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
 ```
 
 ## Accumulated Context
@@ -51,20 +51,22 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - Real layout.json shape for test fixture (Phase 1)
 
 ### Blockers/Concerns
-- Annex B schemas use 19 keywords; subset validator skips on anything else (Phase 3)
+- JSON Schema subset; unsupported keyword → skip (Phase 3)
+- Card ranges F01-F42 expanded; V-MAN-002 omissions group-scoped (Phase 3)
+- Phase 4: confirm sources for evidence, README versions, escalations, retired IDs before planning
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
-Last commit: feat(02-xml) phase commit
+Last commit: feat(03-manifest) phase commit
 Branch: main
 Feature branches merged: none
 
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 03-01 applied
-Next action: /paul:unify .paul/phases/03-manifest/03-01-PLAN.md
-Resume file: .paul/phases/03-manifest/03-01-PLAN.md
+Stopped at: Phase 3 complete, ready to plan Phase 4
+Next action: /paul:plan for Phase 4 (Coherence + DoD)
+Resume file: .paul/ROADMAP.md
 
 ---
 *STATE.md — Updated after every significant action*

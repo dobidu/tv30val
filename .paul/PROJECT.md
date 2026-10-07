@@ -22,7 +22,7 @@ Normative conformance findings with a citable source on every check — and miss
 |-----------|-------|
 | Type | Application (CLI tool) |
 | Version | 0.1.0-dev |
-| Status | Prototype — Phase 2 of 4 done |
+| Status | Prototype — Phase 3 of 4 done |
 | Last Updated | 2026-10-07 |
 
 ## Requirements
@@ -41,6 +41,7 @@ Normative conformance findings with a citable source on every check — and miss
 - ✓ Full check catalogue metadata (39 checks), `--list-checks` — Phase 1
 - ✓ Skip-never-pass; `pcap` family stub — Phase 1
 - ✓ XML family complete, V-XML-001..012 — Phase 2
+- ✓ Manifest family complete, V-MAN-001..006 + JSON Schema subset — Phase 3
 - ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
 
 ### Active (In Progress)
@@ -61,7 +62,7 @@ None yet.
 ### Technical Constraints
 - Node 18+, no new runtime deps (unless team lifts rule — decision in `docs/project/decisions.md`)
 - XSD validation via `xmllint --schema` shell-out; skip with install hint if absent
-- JSON Schema 2020-12: implement only subset Annex B schemas use; unsupported keywords → skipped
+- JSON Schema 2020-12: subset Annex B schemas use (17 keywords) implemented in lib/jsonschema.js; unsupported keywords → skipped
 - All IDs via `tools/atlantis/catalog.js` + `lib/ids.js`; all paths via `tools/atlantis/layout.json`
 - Absent source (XSD, Annex table) = `skipped` with reason; never changes exit code; always printed
 - Never parse standard PDF at runtime
@@ -84,6 +85,7 @@ None yet.
 | Pass results only when check ran with source available | Avoid false "nothing validated" | 2026-10-07 | Active |
 | Load AtlantisPB catalog/layout/ids via require from --root | Principles 4/5: team modules answer IDs and paths | 2026-10-07 | Active |
 | V-XML-010: unknown st3- app = blocking, non-kebab name = note | Never pass silently, never guess | 2026-10-07 | Active |
+| Manifest card refs accept filler ranges; case omissions group-scoped | Matches schema doc and Annex B per-group manifests | 2026-10-07 | Active |
 | Family modules with stub fallback | Each phase adds one file; skip until implemented | 2026-10-07 | Active |
 
 ## Success Metrics (Definition of Done, HANDOFF §9)
@@ -111,4 +113,4 @@ None yet.
 - Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 2*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 3*
