@@ -16,24 +16,26 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.1 Initial Release
-Phase: Not yet defined (draft: 1 — Core)
-Plan: None yet
-Status: Ready to create first PLAN
-Last activity: 2026-10-07 — Project initialized from HANDOFF_Normative_Artifact_Validator.md
+Phase: 1 of 4 (Core) — Planning
+Plan: 01-01 created, awaiting approval
+Status: PLAN created, ready for APPLY
+Last activity: 2026-10-07 — Created .paul/phases/01-core/01-01-PLAN.md
 
 Progress:
 - Milestone: [░░░░░░░░░░] 0%
+- Phase 1: [░░░░░░░░░░] 0%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ○        ○        ○     [Ready for first PLAN]
+  ✓        ○        ○     [Plan created, awaiting approval]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- Standalone repo github.com/dobidu/tv30val; targets AtlantisPB checkout via --root (default cwd)
 - Quick-and-dirty mode; handoff recommendations = defaults (xmllint, advisory, v0.1 = xml/manifest/coherence)
 
 ### Deferred Issues
@@ -41,14 +43,14 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - XSD availability — affects V-XML-002..005
 
 ### Blockers/Concerns
-- AtlantisPB repo not in /home/bidu/tv30val — need clone/location before APPLY
+- Need AtlantisPB checkout for phase 2+ real runs (phase 1 works without it)
 
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Project initialization complete
-Next action: Run /paul:plan to define phase 1 plan
-Resume file: .paul/PROJECT.md (spec: .paul/HANDOFF.md)
+Stopped at: Plan 01-01 created
+Next action: Review and approve plan, then run /paul:apply .paul/phases/01-core/01-01-PLAN.md
+Resume file: .paul/phases/01-core/01-01-PLAN.md
 
 ---
 *STATE.md — Updated after every significant action*

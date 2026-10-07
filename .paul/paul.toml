@@ -11,17 +11,19 @@ source = "https://chrisai.cv/skool"
 [milestone]
 name = "v0.1 Initial Release"
 version = "0.1.0"
-status = "not_started"
+status = "in_progress"
 phases = 4
 
 [phase]
-number = 0
-name = "None"
+number = 1
+name = "Core"
 status = "not_started"
 plans_completed = 0
 
 [loop]
-position = "IDLE"
+position = "PLAN"
+plan = "01-01"
+plan_path = "phases/01-core/01-01-PLAN.md"
 
 [satellite]
 groom = true
