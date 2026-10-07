@@ -21,7 +21,7 @@ status = "not_started"
 plans_completed = 0
 
 [loop]
-position = "PLAN"
+position = "APPLY"
 plan = "08-01"
 plan_path = "phases/08-gating/08-01-PLAN.md"
 

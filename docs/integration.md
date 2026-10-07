@@ -28,8 +28,52 @@ Useful variants:
 validate-normative --root … --family xml            # one family
 validate-normative --root … ST3_BALD_032            # one artifact
 validate-normative --root … --severity blocking     # only blocking findings (skips still listed)
+validate-normative --root … --gate xml,manifest     # only these families fail the run
 validate-normative --root … --json > report.json    # for CI or scripts
 validate-normative --list-checks                    # catalogue with clauses
+```
+
+## Gating
+
+Exit codes: `0` no gating blocking finding, `1` at least one, `2` the tool
+could not run. By default every family gates. `--gate` narrows it:
+
+```
+validate-normative --root … --gate xml,manifest   # only these families fail the run
+validate-normative --root … --gate none           # advisory: report everything, never exit 1
+```
+
+Gating findings are marked `[blocking, gate]` in the text report; `--json`
+adds `gate` and `summary.gatingFindings`.
+
+GitLab CI (advisory job plus a gated job):
+
+```yaml
+normative:
+  image: node:20
+  script:
+    - git clone --depth 1 https://github.com/dobidu/tv30val /tmp/tv30val
+    - node /tmp/tv30val/bin/validate-normative.js --root . --gate xml,manifest
+  artifacts:
+    when: always
+    paths: [normative.json]
+  after_script:
+    - node /tmp/tv30val/bin/validate-normative.js --root . --gate none --json > normative.json || true
+```
+
+GitHub Actions:
+
+```yaml
+jobs:
+  normative:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: sudo apt-get install -y libxml2-utils   # enables V-XML-002/004/005
+      - run: git clone --depth 1 https://github.com/dobidu/tv30val /tmp/tv30val
+      - run: node /tmp/tv30val/bin/validate-normative.js --root . --gate xml,manifest
 ```
 
 ## Vendoring into `tools/atlantis/` (if the team adopts it)

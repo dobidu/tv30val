@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.2 Media, modules, applications, gating
-Phase: 8 of 9 (Gating + v0.2 wrap-up) — Planning
-Plan: 08-01 created, awaiting approval
-Status: PLAN created, ready for APPLY
-Last activity: 2026-10-07 — Created .paul/phases/08-gating/08-01-PLAN.md
+Phase: 8 of 9 (Gating + v0.2 wrap-up) — Applying
+Plan: 08-01 executed (gate + docs; release moved to 08-02)
+Status: APPLY complete, ready for UNIFY
+Last activity: 2026-10-07 — Executed 08-01; 89 tests; upstream committed official XSDs
 
 Progress:
 - v0.2: [███████░░░] 70%
@@ -28,12 +28,14 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ○        ○     [Plan created, awaiting approval]
+  ✓        ✓        ○     [Applied, ready for UNIFY]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- 2026-10-07: Wire AtlantisPB-committed NBR 25608 XSDs before v0.2.0 (plan 08-02); release moves to 08-02
+- 2026-10-07: Phase 9 (API index) moves to v0.3
 - Local URLs in app code = note; V-APP-011 reclassified as team convention (Phase 7)
 - V-APP-003 counts loaded references only; README tables by column name (Phase 7)
 - 2026-10-07: Phase 7 split — index-free app checks now; API index → Phase 9 (blocked)
@@ -76,8 +78,8 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 08-01 created
-Next action: Approve, then /paul:apply .paul/phases/08-gating/08-01-PLAN.md
+Stopped at: Plan 08-01 applied
+Next action: /paul:unify .paul/phases/08-gating/08-01-PLAN.md, then plan 08-02 (official XSDs + release)
 Resume file: .paul/phases/08-gating/08-01-PLAN.md
 
 ---

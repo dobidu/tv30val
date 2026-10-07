@@ -20,7 +20,7 @@ function main(argv) {
   }
   const ctx = buildContext({ root: opts.root, schemas: opts.schemas });
   const targets = classifyTargets(opts.targets, ctx.root);
-  const out = run(ctx, { families: opts.families, targets, severity: opts.severity });
+  const out = run(ctx, { families: opts.families, targets, severity: opts.severity, gate: opts.gate });
   console.log(opts.json ? report.json(ctx, out) : report.text(ctx, out));
   return out.exitCode;
 }

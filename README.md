@@ -45,12 +45,15 @@ node bin/validate-normative.js [target …] [options]
   --family <f>      xml | app | module | manifest | coherence | media | pcap  (repeatable)
   --schemas <dir>   XSD directory (else $ATLANTIS_SCHEMAS, else <root>/reference/schemas)
   --severity <s>    minimum severity to report: note | should-fix | blocking
+  --gate <f,…>      only blocking findings in these families fail the run
+                    (default: all; "none" = advisory)
   --json            machine-readable output
   --list-checks     print the check catalogue with clauses and exit
   -h, --help        show help
 ```
 
-Exit codes: `0` no blocking finding · `1` at least one blocking finding ·
+Exit codes: `0` no gating blocking finding · `1` at least one (every family
+gates unless `--gate` narrows it) ·
 `2` the tool could not run (bad argument, missing root, unreadable `--schemas`).
 `skipped` never changes the exit code. Results are `finding`, `pass` (the
 check ran with its source available and found nothing) or `skipped`. `--severity` filters findings only;

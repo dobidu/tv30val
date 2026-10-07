@@ -53,3 +53,44 @@ still `proposed` without `builtIn`); the notes are formal applications not
 started yet and one manifest that does not yet list another group's cases.
 Every skip has a stated reason (no XSDs, no ESG documents yet, v0.2 families,
 PCAP deferred).
+
+---
+
+## 2026-10-07 — Normative artifact validator (v0.2): new families, gating
+
+**Context.** v0.2 extends the validator beyond the handoff of 2026-10-02.
+
+**Decision 1 — media assets are checked (new `media` family).** The handoff
+did not cover media. Form (folders, names) stays with `check-structure.js`;
+the validator checks content: the file is a catalogued media ID used by the
+application (V-MED-001), its bytes match its extension (V-MED-002), its kind
+fits its `assets/` folder (V-MED-003), and HSTREAM manifests (DASH/HLS) meet
+the requirement written in the catalogue description (V-MED-004). Which
+formats are allowed per media type is not recorded anywhere in the
+repository; the validator's table is marked "to confirm against NBR 25608"
+and unknown formats are notes, never blocking.
+
+**Decision 2 — common modules against the Manual's own list.** V-MOD-001
+compares `common/modules/` with Manual v1.0 §6.5.5 (read from the Manual
+PDF): additions must be declared in this file, omissions recorded as
+deviations (GingaCCWebServices, decision of 2026-09-29, shows as a note).
+V-MOD-002 rejects suite identifiers and application paths in module code.
+
+**Decision 3 — application checks without the API index.** V-APP-001..005
+and 008..011 run now. Two judgements need the team:
+
+- V-APP-008 reports inline loopback/LAN URLs as notes. Five applications
+  inline `http://localhost:44642`, the Ginga Desktop WebServices port. Move
+  them to `configuration/` (Manual §6.5.6), or record the clause that fixes
+  the endpoint.
+- V-APP-011 is a team convention (placeholder text), not a Manual rule: the
+  Manual sets no language for tester-facing text.
+
+**Decision 4 — opt-in gating.** `--gate <family,…>` makes only blocking
+findings of the listed families fail the run; `--gate none` is purely
+advisory. Proposal: start CI with `--gate xml,manifest` (stable, schema-backed
+families) and widen as the team trusts the rest.
+
+**Still open.** The API index (V-APP-006/007, V-MOD-003) moves to v0.3: it
+needs the coordinators' answer on committing `api-index.json` and NBR 25608
+Annexes C/D, which are not among the complementary files.
