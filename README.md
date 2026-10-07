@@ -11,9 +11,8 @@ It complements the existing form checks in `tools/atlantis/` (coding standard,
 repository structure, README structure, catalogue IDs, evidence shape). It does
 not replace them.
 
-> **Status:** v0.1 in progress — CLI, catalogue and skip semantics work;
-> the `xml` (V-XML-001..012) and `manifest` (V-MAN-001..006) families are
-> complete. Other families report `skipped` until implemented. Proposal, not yet
+> **Status:** v0.1 — the `xml`, `manifest` and `coherence` families are
+> complete. `app` and `module` (v0.2) and `pcap` (deferred) report `skipped`. Proposal, not yet
 > adopted by the team. Advisory only; not part of any PR gate.
 
 ## Principles
@@ -82,7 +81,7 @@ rather than verified against the standard itself.
 |---|---|---|---|
 | `xml` | BALD, BAMT, PRRD, ESG, AEAT signalling | V-XML-001..012 | v0.1 ✓ |
 | `manifest` | BTDS Annex B manifests and `cards.json` | V-MAN-001..006 | v0.1 ✓ |
-| `coherence` | Cross-artifact consistency with the catalogue | V-COH-001..006 | v0.1 |
+| `coherence` | Cross-artifact consistency with the catalogue | V-COH-001..006 | v0.1 ✓ |
 | `app` | Test applications, API usage vs. Annexes C/D | V-APP-001..011 | v0.2 |
 | `module` | Common modules | V-MOD-001..003 | v0.2 |
 | `pcap` | PCAP/TS streams | — (always `skipped`) | deferred |

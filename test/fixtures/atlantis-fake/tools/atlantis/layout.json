@@ -4,7 +4,16 @@
     "manual": {
       "xml": "xmls/{xmlType}/{kebabId}.xml",
       "annexB": "docs/annex-b",
-      "fillerGroup": "applications-staging"
+      "fillerGroup": "applications-staging",
+      "appRoots": [
+        "applications/*",
+        "applications-staging/*"
+      ],
+      "codeRoots": [
+        "applications/",
+        "applications-staging/"
+      ],
+      "evidence": "docs/evidence/{kebabId}"
     }
   }
 }
