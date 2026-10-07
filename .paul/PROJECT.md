@@ -21,8 +21,8 @@ Normative conformance findings with a citable source on every check — and miss
 | Attribute | Value |
 |-----------|-------|
 | Type | Application (CLI tool) |
-| Version | 0.1.0 |
-| Status | v0.1.0 released; v0.2 in progress (Phases 5-7 done, 9 blocked) |
+| Version | 0.2.0 |
+| Status | v0.2.0 released (standalone, advisory, opt-in gating) |
 | Last Updated | 2026-10-07 |
 
 ## Requirements
@@ -45,16 +45,17 @@ Normative conformance findings with a citable source on every check — and miss
 - ✓ Media family complete, V-MED-001..004 — Phase 5
 - ✓ Module family V-MOD-001..002 — Phase 6
 - ✓ App family V-APP-001..005, 008..011 — Phase 7
+- ✓ Opt-in gating (--gate) — Phase 8
+- ✓ Official NBR 25608 XSDs (xmllint or xmlschema) — Phase 8
 - ✓ Decisions draft + integration guide for the team — Phase 4
 - ✓ Manifest family complete, V-MAN-001..006 + JSON Schema subset — Phase 3
 - ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
 
 ### Active (In Progress)
-- [ ] Gating + v0.2.0 (Phase 8)
-- [ ] API index (Phase 9) — blocked on external input
+None.
 
 ### Planned (Next)
-- v0.2 (milestone created): media family (Phase 5), module family (6), API index + app family (7, blocked), gating + wrap-up (8)
+- v0.3: API index + V-APP-006/007 + V-MOD-003 (Phase 9, blocked); NCL main.ncl vs NCL4.0 profile and AMM/nga JSON schemas (Phase 10)
 
 ### Out of Scope
 - PCAP/TS stream validation — no massa de teste, owner undefined; `pcap` family reports skipped only
@@ -66,7 +67,7 @@ Normative conformance findings with a citable source on every check — and miss
 
 ### Technical Constraints
 - Node 18+, no new runtime deps (unless team lifts rule — decision in `docs/project/decisions.md`)
-- XSD validation via `xmllint --schema` shell-out; skip with install hint if absent
+- XSD validation via `xmllint` or Python `xmlschema` shell-out; skip with install hint if absent
 - JSON Schema 2020-12: subset Annex B schemas use (17 keywords) implemented in lib/jsonschema.js; unsupported keywords → skipped
 - All IDs via `tools/atlantis/catalog.js` + `lib/ids.js`; all paths via `tools/atlantis/layout.json`
 - Absent source (XSD, Annex table) = `skipped` with reason; never changes exit code; always printed
@@ -118,7 +119,7 @@ Normative conformance findings with a citable source on every check — and miss
 ## Open Questions (HANDOFF §10)
 
 - AtlantisPB checkout needed for real runs (layout.json shape, catalog.js API)
-- Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
+- XSDs: resolved — AtlantisPB commits the complementary files (2026-10-07).
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 7*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after v0.2 milestone*

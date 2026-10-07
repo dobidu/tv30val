@@ -15,21 +15,21 @@ Normative validator for AtlantisPB artifacts. v0.1 shipped core CLI + xml, manif
 | Version | Name | Phases | Status | Completed |
 |---------|------|--------|--------|-----------|
 | v0.1 | Initial Release | 1-4 | ✅ Shipped | 2026-10-07 |
-| v0.2 | Media, modules, applications, gating | 5-8 | 🚧 In Progress | - |
+| v0.2 | Media, modules, applications, gating | 5-8 | ✅ Shipped (v0.2.0) | 2026-10-07 |
 | v0.3 | API index, NCL/JSON schemas | 9- | 📋 Planned | - |
 
 ## Current Milestone
 
 **v0.2 Media, modules, applications, gating** (v0.2.0)
-Status: 🚧 In Progress
-Phases: 3 of 4 complete
+Status: ✅ Complete (v0.2.0, 2026-10-07)
+Phases: 4 of 4 complete
 
 | Phase | Name | Plans | Status | Completed |
 |-------|------|-------|--------|-----------|
 | 5 | Media family (V-MED-001..004, new) | 2/2 | ✅ Complete | 2026-10-07 |
 | 6 | Module family (V-MOD-001..002; 003 needs API index) | 1/1 | ✅ Complete | 2026-10-07 |
 | 7 | App family without API index (V-APP-001..005, 008..011) | 2/2 | ✅ Complete | 2026-10-07 |
-| 8 | Gating + official XSDs + v0.2.0 | 1/2 | In progress | - |
+| 8 | Gating + official XSDs + v0.2.0 | 2/2 | ✅ Complete | 2026-10-07 |
 
 ### Phase 5: Media family ✅
 05-01 V-MED-001..003 (catalogued IDs, content vs extension, kind vs folder); 05-02 V-MED-004 (HSTREAM manifests vs catalogue description). Real repo has no media yet → skipped.
@@ -53,7 +53,9 @@ Real repo: 5 V-APP-008 notes (inline emulator WebServices URL); everything else 
 **Goal:** `api-index.json` from NBR 25608 Annexes C/D (generated once, reviewed as PR); V-APP-006 (API allowlist), V-APP-007 (API group vs case), V-MOD-003 (tv30-webservices surface).
 **Depends on:** coordinators' answer on committing api-index.json; access to the standard. May move to v0.3.
 
-### Phase 8: Gating + wrap-up
+### Phase 8: Gating + wrap-up ✅
+08-01 --gate + team docs; 08-02 official XSDs (xmlschema backend), real PRRD findings match the team backlog; v0.2.0 released.
+
 **Goal:** opt-in gate mode (exit 1 on blocking only for chosen families), updated decisions draft and integration guide, v0.2.0 release.
 **Depends on:** Phases 5-7 (Phase 9 may follow or move to v0.3).
 

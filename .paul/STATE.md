@@ -11,29 +11,30 @@ about: "tv30val"
 See: .paul/PROJECT.md (updated 2026-10-07)
 
 **Core value:** Normative conformance findings with a citable source on every check — missing sources = SKIP, never PASS.
-**Current focus:** v0.2 — Phase 8 (gating + v0.2.0 release)
+**Current focus:** v0.2.0 shipped — next: v0.3 (API index blocked; NCL/JSON schemas available)
 
 ## Current Position
 
-Milestone: v0.2 Media, modules, applications, gating
-Phase: 8 of 8 (Gating + v0.2 wrap-up) — Applying
-Plan: 08-02 executed (2/2 PASS); v0.2.0 released
-Status: APPLY complete, ready for UNIFY
-Last activity: 2026-10-07 — Executed 08-02; official XSDs live; 9 real PRRD findings match team backlog; v0.2.0
+Milestone: v0.2 Media, modules, applications, gating — ✅ Complete (v0.2.0)
+Phase: 8 of 8 complete
+Plan: none
+Status: Milestone complete; v0.3 planned (Phase 9 blocked, Phase 10 ready to plan)
+Last activity: 2026-10-07 — Phase 8 complete; v0.2.0 tagged and released
 
 Progress:
-- v0.2: [████████░░] 85%
+- v0.2: [██████████] 100%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [Applied, ready for UNIFY]
+  ✓        ✓        ✓     [Loop complete - milestone done]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- Official XSDs from AtlantisPB complementary files; xmlschema backend; V-XML-002 passes only clean (Phase 8)
 - 2026-10-07: Wire AtlantisPB-committed NBR 25608 XSDs before v0.2.0 (plan 08-02); release moves to 08-02
 - 2026-10-07: Phase 9 (API index) moves to v0.3
 - Local URLs in app code = note; V-APP-011 reclassified as team convention (Phase 7)
@@ -55,8 +56,8 @@ PLAN ──▶ APPLY ──▶ UNIFY
 
 ### Deferred Issues
 - api-index.json commit permission (coordinators) — blocks v0.2 app family
-- XSD availability — affects V-XML-002..005
-- Namespaces for BAMT/ESG/AEAT unknown (V-XML-003 skips)
+- Real PRRD 002..005 schema errors are AtlantisPB backlog work (not a tool issue)
+- Namespaces for ESG/AEAT unknown (V-XML-003 skips)
 - V-XML-009 deliberate windows rely on header wording (Phase 2)
 - Real layout.json shape for test fixture (Phase 1)
 
@@ -71,16 +72,16 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
-Last commit: feat(07-app) phase commit
+Last commit: v0.2.0 tag
 Branch: main
 Feature branches merged: none
 
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 08-02 applied, v0.2.0 released
-Next action: /paul:unify .paul/phases/08-gating/08-02-PLAN.md (closes v0.2)
-Resume file: .paul/phases/08-gating/08-02-PLAN.md
+Stopped at: v0.2 milestone complete (v0.2.0 released)
+Next action: share v0.2.0 with team; /paul:milestone for v0.3 when ready (Phase 10 NCL/JSON schemas is unblocked)
+Resume file: .paul/ROADMAP.md
 
 ---
 *STATE.md — Updated after every significant action*
