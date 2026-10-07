@@ -11,30 +11,30 @@ about: "tv30val"
 See: .paul/PROJECT.md (updated 2026-10-07)
 
 **Core value:** Normative conformance findings with a citable source on every check — missing sources = SKIP, never PASS.
-**Current focus:** v0.2 — Phase 6 (Module family)
+**Current focus:** v0.2 — Phase 7 blocked (API index); Phase 8 (gating) available
 
 ## Current Position
 
 Milestone: v0.2 Media, modules, applications, gating
-Phase: 6 of 8 (Module family) — Applying
-Plan: 06-01 executed (2/2 PASS)
-Status: APPLY complete, ready for UNIFY
-Last activity: 2026-10-07 — Executed 06-01; 73 tests; real: 1 note (recorded GingaCC deviation), 16 pass
+Phase: 7 of 8 (API index + app family) — BLOCKED
+Plan: Not started
+Status: Blocked on external input; Phase 8 can proceed with 7 deferred
+Last activity: 2026-10-07 — Phase 6 complete (06-01 unified)
 
 Progress:
-- v0.2: [██▌░░░░░░░] 25%
-- Phase 6: [░░░░░░░░░░] 0%
+- v0.2: [█████░░░░░] 50%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [Applied, ready for UNIFY]
+  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- Module list from Manual v1.0 PDF §6.5.5; declarations matched per decisions.md paragraph (Phase 6)
 - HSTREAM requirements read from catalogue description at runtime; unprovable → skipped (Phase 5)
 - Media item = asset-folder entry (file or stream dir); allowlist to confirm; unknown format = note (Phase 5)
 - 2026-10-07: v0.2 adds a `media` family (beyond handoff); media first since unblocked
@@ -57,7 +57,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 ### Blockers/Concerns
 - JSON Schema subset; unsupported keyword → skip (Phase 3)
 - Card ranges F01-F42 expanded; V-MAN-002 omissions group-scoped (Phase 3)
-- Phase 7 blocked on: api-index.json commit permission (coordinators) + standard PDF
+- Phase 7 blocked on: api-index.json commit permission (coordinators) + NBR 25608 PDF (Annexes C/D) — not in AtlantisPB, not available here
 - Media format allowlist not in repo docs → V-MED-003 allowlist "(to confirm)", unknown formats = note
 - No media assets in AtlantisPB yet → media family skips on real repo (future-proofing)
 - Deferred: segment decoding via ffprobe; remote HSTREAM manifests
@@ -65,16 +65,16 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
-Last commit: feat(05-media) phase commit
+Last commit: feat(06-module) phase commit
 Branch: main
 Feature branches merged: none
 
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 06-01 applied
-Next action: /paul:unify .paul/phases/06-module/06-01-PLAN.md
-Resume file: .paul/phases/06-module/06-01-PLAN.md
+Stopped at: Phase 6 complete; Phase 7 blocked
+Next action: decide — wait for Phase 7 inputs, or /paul:plan Phase 8 with Phase 7 deferred to v0.3
+Resume file: .paul/ROADMAP.md
 
 ---
 *STATE.md — Updated after every significant action*

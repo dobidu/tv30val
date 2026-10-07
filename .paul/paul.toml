@@ -15,21 +15,19 @@ status = "in_progress"
 phases = 4
 
 [phase]
-number = 6
-name = "Module family"
-status = "not_started"
+number = 7
+name = "API index + app family"
+status = "blocked"
 plans_completed = 0
 
 [loop]
-position = "APPLY"
-plan = "06-01"
-plan_path = "phases/06-module/06-01-PLAN.md"
+position = "IDLE"
 
 [satellite]
 groom = true
 
 [stats]
-total_plans = 8
+total_plans = 9
 total_phases = 8
-completed_phases = 5
+completed_phases = 6
 last_activity = "2026-10-07T00:00:00Z"

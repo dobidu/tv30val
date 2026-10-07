@@ -21,12 +21,12 @@ Normative validator for AtlantisPB artifacts. v0.1 shipped core CLI + xml, manif
 
 **v0.2 Media, modules, applications, gating** (v0.2.0)
 Status: 🚧 In Progress
-Phases: 1 of 4 complete
+Phases: 2 of 4 complete
 
 | Phase | Name | Plans | Status | Completed |
 |-------|------|-------|--------|-----------|
 | 5 | Media family (V-MED-001..004, new) | 2/2 | ✅ Complete | 2026-10-07 |
-| 6 | Module family (V-MOD-001..002; 003 needs API index) | 0/1 | Planning | - |
+| 6 | Module family (V-MOD-001..002; 003 needs API index) | 1/1 | ✅ Complete | 2026-10-07 |
 | 7 | API index + app family (V-APP-001..011) | TBD | Blocked (api-index.json decision) | - |
 | 8 | Gating on blocking + v0.2 wrap-up | TBD | Not started | - |
 
@@ -36,7 +36,9 @@ Phases: 1 of 4 complete
 **Goal:** validate media assets in applications (`assets/{audios,fonts,hstreams,images,texts,videos}/`): catalogued media IDs (V-MED-001), real format matches extension via magic bytes, no deps (V-MED-002), format allowed for the media type (V-MED-003, clause to confirm → skipped until known), properties vs case requirements via optional `ffprobe` (V-MED-004). Stream-carried media (HSTREAM/MMEDIA/MHAUDIO in PCAPs) stays with `pcap`.
 **Depends on:** v0.1 (catalogue, adapter). **Research:** Likely (NBR 25608 media format clauses; group-document media requirements).
 
-### Phase 6: Module family
+### Phase 6: Module family ✅
+V-MOD-001..002 against the Manual v1.0 §6.5.5 list; real repo: 1 recorded-deviation note, 16 pass. V-MOD-003 waits for Phase 7.
+
 **Goal:** V-MOD-001 module folders vs Manual §6.5.5 list (+ declared additions), V-MOD-002 no app-specific logic / hard-coded case data in modules. V-MOD-003 skipped until the API index exists.
 **Depends on:** v0.1. **Research:** Unlikely.
 

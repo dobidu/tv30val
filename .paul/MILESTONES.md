@@ -16,5 +16,5 @@ Core CLI, xml (V-XML-001..012), manifest (V-MAN-001..006), coherence (V-COH-001.
 
 ## v0.2 Media, modules, applications, gating 🚧
 **Goal:** cover the remaining artifact kinds — media assets (new `media` family), common modules, test applications — and propose gating on blocking findings.
-**Progress:** Phase 5 (media) ✅ 2026-10-07.
+**Progress:** Phase 5 (media) ✅, Phase 6 (modules) ✅ 2026-10-07.
 **Blocker:** app family V-APP-006/007 and module V-MOD-003 need `api-index.json` (coordinators: may it be committed?) and the standard's Annexes C/D to generate it.
