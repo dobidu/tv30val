@@ -28,7 +28,7 @@ Phases: 3 of 5 complete
 | 5 | Media family (V-MED-001..004, new) | 2/2 | ✅ Complete | 2026-10-07 |
 | 6 | Module family (V-MOD-001..002; 003 needs API index) | 1/1 | ✅ Complete | 2026-10-07 |
 | 7 | App family without API index (V-APP-001..005, 008..011) | 2/2 | ✅ Complete | 2026-10-07 |
-| 8 | Gating on blocking + v0.2 wrap-up | TBD | Not started | - |
+| 8 | Gating on blocking + v0.2 wrap-up | 0/1 | Planning | - |
 | 9 | API index + V-APP-006/007 + V-MOD-003 | TBD | Blocked (api-index.json decision + NBR 25608 Annexes C/D) | - |
 
 ### Phase 5: Media family ✅

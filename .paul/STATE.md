@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.2 Media, modules, applications, gating
-Phase: 8 of 9 (Gating + v0.2 wrap-up)
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-10-07 — Phase 7 complete (07-01, 07-02 unified)
+Phase: 8 of 9 (Gating + v0.2 wrap-up) — Planning
+Plan: 08-01 created, awaiting approval
+Status: PLAN created, ready for APPLY
+Last activity: 2026-10-07 — Created .paul/phases/08-gating/08-01-PLAN.md
 
 Progress:
 - v0.2: [███████░░░] 70%
@@ -28,7 +28,7 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
+  ✓        ○        ○     [Plan created, awaiting approval]
 ```
 
 ## Accumulated Context
@@ -76,9 +76,9 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Phase 7 complete, ready to plan Phase 8
-Next action: /paul:plan for Phase 8 (gating + v0.2.0)
-Resume file: .paul/ROADMAP.md
+Stopped at: Plan 08-01 created
+Next action: Approve, then /paul:apply .paul/phases/08-gating/08-01-PLAN.md
+Resume file: .paul/phases/08-gating/08-01-PLAN.md
 
 ---
 *STATE.md — Updated after every significant action*
