@@ -13,7 +13,18 @@
         "applications/",
         "applications-staging/"
       ],
-      "evidence": "docs/evidence/{kebabId}"
+      "evidence": "docs/evidence/{kebabId}",
+      "module": "common/modules/{moduleKebab}"
+    }
+  },
+  "modules": {
+    "ButtonsBox": {
+      "current": "ButtonsBox",
+      "manual": "buttons-box"
+    },
+    "TeamWidget": {
+      "current": "TeamWidget",
+      "manual": "team-widget"
     }
   }
 }

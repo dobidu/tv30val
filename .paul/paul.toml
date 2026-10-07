@@ -21,7 +21,7 @@ status = "not_started"
 plans_completed = 0
 
 [loop]
-position = "PLAN"
+position = "APPLY"
 plan = "06-01"
 plan_path = "phases/06-module/06-01-PLAN.md"
 

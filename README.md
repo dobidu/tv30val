@@ -12,8 +12,9 @@ repository structure, README structure, catalogue IDs, evidence shape). It does
 not replace them.
 
 > **Status:** v0.1.0 — the `xml`, `manifest` and `coherence` families are
-> complete (24 of 39 v0.1 checks); v0.2 adds `media` (V-MED-001..004). `app` and `module` (v0.2) and `pcap` (deferred)
-> report `skipped`. Proposal, not yet adopted by the team; advisory only, not
+> complete (24 of 39 v0.1 checks); v0.2 adds `media` (V-MED-001..004) and
+> `module` (V-MOD-001..002). `app` and V-MOD-003 (need the API index) and
+> `pcap` (deferred) report `skipped`. Proposal, not yet adopted by the team; advisory only, not
 > part of any PR gate. See [docs/integration.md](docs/integration.md) and
 > [docs/decisions-draft.md](docs/decisions-draft.md).
 
@@ -117,7 +118,7 @@ rather than verified against the standard itself.
 | `coherence` | Cross-artifact consistency with the catalogue | V-COH-001..006 | v0.1 ✓ |
 | `media` | Media assets in `assets/` (catalogued IDs, content vs extension, kind vs folder, stream content) | V-MED-001..004 | v0.2 ✓ |
 | `app` | Test applications, API usage vs. Annexes C/D | V-APP-001..011 | v0.2 |
-| `module` | Common modules | V-MOD-001..003 | v0.2 |
+| `module` | Common modules vs Manual §6.5.5 | V-MOD-001..003 | v0.2 (001..002 ✓; 003 needs API index) |
 | `pcap` | PCAP/TS streams | — (always `skipped`) | deferred |
 
 ## Normative sources

@@ -1,0 +1,1 @@
+-- Synthetic: the Manual says this module does not apply to NCL.
