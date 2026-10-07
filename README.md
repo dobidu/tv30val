@@ -1,6 +1,6 @@
 # tv30val — Normative Artifact Validator
 
-A dependency-free Node 18+ checker for the TV 3.0 test-suite artifacts of
+A dependency-free Node 18.3+ checker for the TV 3.0 test-suite artifacts of
 [AtlantisPB](https://github.com/AtlantisTV3PB/AtlantisPB). It answers one
 question per artifact:
 
@@ -11,9 +11,11 @@ It complements the existing form checks in `tools/atlantis/` (coding standard,
 repository structure, README structure, catalogue IDs, evidence shape). It does
 not replace them.
 
-> **Status:** v0.1 — the `xml`, `manifest` and `coherence` families are
-> complete. `app` and `module` (v0.2) and `pcap` (deferred) report `skipped`. Proposal, not yet
-> adopted by the team. Advisory only; not part of any PR gate.
+> **Status:** v0.1.0 — the `xml`, `manifest` and `coherence` families are
+> complete (24 of 39 checks). `app` and `module` (v0.2) and `pcap` (deferred)
+> report `skipped`. Proposal, not yet adopted by the team; advisory only, not
+> part of any PR gate. See [docs/integration.md](docs/integration.md) and
+> [docs/decisions-draft.md](docs/decisions-draft.md).
 
 ## Principles
 
@@ -56,6 +58,37 @@ skips are always reported, and a run where everything skipped prints a warning.
 Every run starts by reporting which sources it found under the root
 (`tools/atlantis/layout.json`, `tools/atlantis/catalog.js`, the schema
 directory, `xmllint`) and why any are missing.
+
+### Example
+
+Run against the synthetic fixture in `test/fixtures/atlantis-fake` (all IDs
+invented):
+
+```
+$ node bin/validate-normative.js --root test/fixtures/atlantis-fake --family coherence
+
+Sources:
+  layout   available  test/fixtures/atlantis-fake/tools/atlantis/layout.json
+  catalog  available  test/fixtures/atlantis-fake/tools/atlantis/catalog.js
+  schemas  MISSING    no schema directory (--schemas, $ATLANTIS_SCHEMAS, reference/schemas/)
+  xmllint  MISSING    xmllint not on PATH (install libxml2-utils / libxml2)
+
+Findings:
+  ST3_F_3GHApp_902
+    [note] V-COH-001 ST3_F_3GHApp_902 not started: no folder at applications/st3-f-3ghapp-902/
+      source: v1.1 catalogue
+  ST3_F_3GHApp_901
+    [should-fix] V-COH-003 README follows G901 group document v1.0, catalogue sources have v1.1
+      source: decision of 2026-09-30
+    [should-fix] V-COH-004 open escalation E91 affects ST3_F_TC_901_001 but the README does not record it as a risk
+      source: decision of 2026-09-14
+  ST3_OPT_901
+    [blocking] V-COH-006 retired identifier ST3_OPT_901 is used — applications/st3-f-3ghapp-901/js/app.js line 2
+      source: project principle
+  …
+
+Summary: 1 blocking, 8 should-fix, 1 note, 14 passed, 0 skipped — 6 checks in coherence
+```
 
 ### Finding format
 
@@ -113,9 +146,21 @@ otherwise schema checks report `skipped` with an install hint.
 npm test        # node --test, no framework
 ```
 
-Layout: `bin/validate-normative.js` (entry), `lib/catalogue.js` (check
-catalogue with clauses), `lib/families/` (one module per family; missing
-modules fall back to a stub that skips), `lib/{args,context,runner,report,finding}.js`.
+Layout:
+
+| Path | Role |
+|---|---|
+| `bin/validate-normative.js` | CLI entry |
+| `lib/catalogue.js` | check catalogue: id, family, severity, source clause |
+| `lib/families/` | one module per family; a missing module falls back to a stub that skips |
+| `lib/atlantis.js` | loads AtlantisPB's own `catalog.js`, `layout.js`, `lib/ids.js` from `--root` |
+| `lib/xml.js`, `lib/header.js` | minimal XML reader + xmllint wrapper; signalling header parser |
+| `lib/jsonschema.js` | JSON Schema 2020-12 subset used by Annex B |
+| `lib/normative/namespaces.js` | expected namespaces / XSD names per XML type (to confirm) |
+| `lib/{args,context,runner,report,finding}.js` | CLI plumbing and result model |
+
+Test fixtures are synthetic. AtlantisPB is private; never copy its content
+here.
 
 Planning artifacts live in `.paul/`.
 

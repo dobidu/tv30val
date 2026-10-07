@@ -1,0 +1,74 @@
+# Integration with AtlantisPB
+
+tv30val is built as a standalone repository and validates an AtlantisPB
+checkout from the outside. It only reads; it never writes to the checkout.
+
+## Running against a checkout
+
+```
+git clone https://github.com/dobidu/tv30val
+node tv30val/bin/validate-normative.js --root path/to/AtlantisPB
+```
+
+The tool loads AtlantisPB's own `tools/atlantis/catalog.js`,
+`tools/atlantis/layout.js` and `tools/atlantis/lib/ids.js` from `--root`, so
+identifiers and paths always come from the team's tooling. If they are
+missing, the checks that need them report `skipped`.
+
+Optional sources:
+
+| Source | How | Without it |
+|---|---|---|
+| XSDs | `reference/schemas/` under the root (gitignored), `$ATLANTIS_SCHEMAS`, or `--schemas <dir>` | V-XML-002, 004, 005 skipped |
+| `xmllint` | `apt install libxml2-utils` (or the platform equivalent) | V-XML-002, 004, 005 skipped; V-XML-001 uses the built-in reader |
+
+Useful variants:
+
+```
+validate-normative --root … --family xml            # one family
+validate-normative --root … ST3_BALD_032            # one artifact
+validate-normative --root … --severity blocking     # only blocking findings (skips still listed)
+validate-normative --root … --json > report.json    # for CI or scripts
+validate-normative --list-checks                    # catalogue with clauses
+```
+
+## Vendoring into `tools/atlantis/` (if the team adopts it)
+
+The handoff proposed `tools/atlantis/validate-normative.js` plus
+`tools/atlantis/normative/`. Mapping:
+
+| tv30val | AtlantisPB |
+|---|---|
+| `bin/validate-normative.js` | `tools/atlantis/validate-normative.js` |
+| `lib/**` | `tools/atlantis/normative/**` |
+| `test/*.test.js`, `test/fixtures/**` | `tools/atlantis/test/normative/**` |
+
+When vendored, `lib/atlantis.js` can `require("./catalog")` etc. directly
+instead of resolving them from `--root`, and `--root` defaults to the
+repository root.
+
+`package.json` script (not added to `npm run check`):
+
+```json
+"check:normative": "node tools/atlantis/validate-normative.js"
+```
+
+Row for `tools/atlantis/README.md`:
+
+```
+| `validate-normative.js` | Normative conformance of XML signalling, Annex B manifests and cross-artifact coherence (NBR 25608:2025, GT-ST Manual). Advisory; not in `npm run check`. | `npm run check:normative` |
+```
+
+`npm run check` lints only the Manual's code roots (`layout.json`
+`codeRoots`), so vendored tool code does not affect it. Expect a style pass to
+match the `tools/atlantis/` conventions (double quotes, section headers).
+
+## Data boundary
+
+AtlantisPB is private and tv30val is public.
+
+- Test fixtures are synthetic (identifiers in the 9xx range), never copied
+  from AtlantisPB.
+- The standard and its XSDs are never committed anywhere (`reference/` is
+  gitignored).
+- Run reports against the real repository are not committed to tv30val.
