@@ -12,7 +12,7 @@ repository structure, README structure, catalogue IDs, evidence shape). It does
 not replace them.
 
 > **Status:** v0.1.0 — the `xml`, `manifest` and `coherence` families are
-> complete (24 of 39 v0.1 checks); v0.2 adds `media` (in progress). `app` and `module` (v0.2) and `pcap` (deferred)
+> complete (24 of 39 v0.1 checks); v0.2 adds `media` (V-MED-001..004). `app` and `module` (v0.2) and `pcap` (deferred)
 > report `skipped`. Proposal, not yet adopted by the team; advisory only, not
 > part of any PR gate. See [docs/integration.md](docs/integration.md) and
 > [docs/decisions-draft.md](docs/decisions-draft.md).
@@ -115,7 +115,7 @@ rather than verified against the standard itself.
 | `xml` | BALD, BAMT, PRRD, ESG, AEAT signalling | V-XML-001..012 | v0.1 ✓ |
 | `manifest` | BTDS Annex B manifests and `cards.json` | V-MAN-001..006 | v0.1 ✓ |
 | `coherence` | Cross-artifact consistency with the catalogue | V-COH-001..006 | v0.1 ✓ |
-| `media` | Media assets in `assets/` (catalogued IDs, content vs extension, kind vs folder, stream content) | V-MED-001..004 | v0.2 (001..003 ✓) |
+| `media` | Media assets in `assets/` (catalogued IDs, content vs extension, kind vs folder, stream content) | V-MED-001..004 | v0.2 ✓ |
 | `app` | Test applications, API usage vs. Annexes C/D | V-APP-001..011 | v0.2 |
 | `module` | Common modules | V-MOD-001..003 | v0.2 |
 | `pcap` | PCAP/TS streams | — (always `skipped`) | deferred |
@@ -137,6 +137,13 @@ Schema directory resolution: `--schemas <dir>` → `$ATLANTIS_SCHEMAS` →
 Annex B manifests are validated by a built-in JSON Schema (2020-12) subset
 covering exactly the keywords the Annex B schemas use; a schema with any other
 keyword makes V-MAN-001 report `skipped`, never pass.
+
+HSTREAM assets (V-MED-004) are checked against the requirement written in
+their catalogue description, read from `--root` at run time: generic phrases
+("at least two audio languages", "HLS content", "invalid manifest", …) map to
+checks on the DASH/HLS manifest. Descriptions no manifest can prove (dialogue
+enhancement, ratings, preference-dependent tracks, external URLs) report
+`skipped` with the description as the reason. Segments are not decoded.
 
 XSD validation shells out to `xmllint` (libxml2) when it is on `PATH`;
 otherwise schema checks report `skipped` with an install hint.

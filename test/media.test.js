@@ -82,3 +82,31 @@ test('targets narrow; no media → all four skipped', () => {
   assert.equal(e.results.length, 4);
   assert.ok(e.results.every((r) => r.status === 'skipped' && /no media assets/.test(r.reason)));
 });
+
+test('V-MED-004: HSTREAM manifests meet the catalogue description', () => {
+  const r = (id) => J.results.filter((x) => x.check === 'V-MED-004' && (x.artifact === id || (x.reason || '').includes(id.toLowerCase().replace(/_/g, '-'))));
+  const [langs] = r('ST3_HSTREAM_901');
+  assert.equal(langs.status, 'finding');
+  assert.equal(langs.severity, 'blocking');
+  assert.match(langs.message, /at least two audio languages/);
+  assert.match(langs.evidence, /audio languages: pt/);
+  assert.equal(r('ST3_HSTREAM_903')[0].status, 'pass', 'HLS master satisfies "HLS content"');
+  assert.match(r('ST3_HSTREAM_904')[0].message, /expects an invalid or unavailable manifest/);
+  const [dialogue] = r('ST3_HSTREAM_905');
+  assert.equal(dialogue.status, 'skipped');
+  assert.match(dialogue.reason, /not machine-checkable.*dialogue enhancement/);
+  assert.equal(r('ST3_HSTREAM_902')[0].status, 'skipped', 'no description → skipped, never pass');
+  assert.ok(!J.results.some((x) => x.check === 'V-MED-004' && /not implemented/.test(x.reason || '')));
+});
+
+test('V-MED-004: an invalid manifest passes when the case expects one; missing manifest is blocking', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'tv30val-med-'));
+  fs.cpSync(FAKE, dir, { recursive: true });
+  const streams = path.join(dir, ASSETS, 'hstreams');
+  fs.writeFileSync(path.join(streams, 'st3-hstream-904/manifest.mpd'), '<MPD><Period></MPD>');
+  fs.rmSync(path.join(streams, 'st3-hstream-901/manifest.mpd'));
+  const j = run(dir);
+  const by = (id) => j.results.find((x) => x.check === 'V-MED-004' && x.artifact === id);
+  assert.equal(by('ST3_HSTREAM_904').status, 'pass');
+  assert.match(by('ST3_HSTREAM_901').message, /no DASH or HLS manifest found/);
+});
