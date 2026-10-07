@@ -9,6 +9,7 @@ const ARTIFACTS = [
   { id: 'ST3_BALD_908', type: 'BALD', cases: ['ST3_F_TC_901_008'] },
   { id: 'ST3_BALD_909', type: 'BALD', cases: ['ST3_F_TC_901_008'] },
   { id: 'ST3_F_3GHApp_901', type: 'F_3GHApp', cases: ['ST3_F_TC_901_001', 'ST3_F_TC_901_002'], groups: ['ST3_F_G_901'] },
+  { id: 'ST3_F_3GNApp_901', type: 'F_3GNApp', cases: ['ST3_F_TC_901_020'], groups: ['ST3_F_G_901'] },
   { id: 'ST3_F_3GHApp_902', type: 'F_3GHApp', cases: ['ST3_F_TC_901_010'], groups: ['ST3_F_G_901'] },
   { id: 'ST3_F_3GHApp_902_SCRIPT', type: 'F_3GHApp', cases: ['ST3_F_TC_901_010'], groups: ['ST3_F_G_901'] },
   { id: 'ST3_F_PCAP_901', type: 'F_PCAP', cases: ['ST3_F_TC_901_001', 'ST3_F_TC_901_002', 'ST3_F_TC_902_001'] },

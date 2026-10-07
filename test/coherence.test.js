@@ -69,12 +69,13 @@ test('README variants: plural group documents and no README', () => {
   fs.cpSync(FAKE, dir, { recursive: true });
   const readme = path.join(dir, 'applications/st3-f-3ghapp-901/README.md');
   fs.writeFileSync(readme, 'Cases follow the G901 and G902 group documents v1.1. Risk: E91.\n');
+  const app901 = (check, status, j) => pick(check, status, j).filter((r) => r.artifact === 'ST3_F_3GHApp_901' || (r.reason || '').includes('st3-f-3ghapp-901'));
   let j = run(dir);
-  assert.equal(pick('V-COH-003', 'finding', j).length, 0);
-  assert.equal(pick('V-COH-004', 'finding', j).length, 0);
+  assert.equal(app901('V-COH-003', 'finding', j).length, 0);
+  assert.equal(app901('V-COH-004', 'finding', j).length, 0);
   fs.rmSync(readme);
   j = run(dir);
-  assert.match(pick('V-COH-003', 'skipped', j)[0].reason, /no README\.md/);
+  assert.match(app901('V-COH-003', 'skipped', j)[0].reason, /no README\.md/);
 });
 
 test('ID target narrows to one artifact; no tooling → all skipped', () => {

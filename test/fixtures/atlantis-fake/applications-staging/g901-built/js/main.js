@@ -1,0 +1,1 @@
+const APPLICATION_ID = "ST3_X";
