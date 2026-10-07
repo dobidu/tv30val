@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.2 Media, modules, applications, gating
-Phase: 5 of 8 (Media family) — v0.2 phase 1 of 4
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-10-07 — Milestone v0.2 created (v0.1.0 tagged and released)
+Phase: 5 of 8 (Media family) — Planning
+Plan: 05-01 created, awaiting approval (05-02 = V-MED-004 HSTREAM manifests)
+Status: PLAN created, ready for APPLY
+Last activity: 2026-10-07 — Created .paul/phases/05-media/05-01-PLAN.md
 
 Progress:
 - v0.2: [░░░░░░░░░░] 0%
@@ -28,7 +28,7 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ○        ○        ○     [Ready for first PLAN]
+  ✓        ○        ○     [Plan created, awaiting approval]
 ```
 
 ## Accumulated Context
@@ -55,7 +55,8 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - JSON Schema subset; unsupported keyword → skip (Phase 3)
 - Card ranges F01-F42 expanded; V-MAN-002 omissions group-scoped (Phase 3)
 - Phase 7 blocked on: api-index.json commit permission (coordinators) + standard PDF
-- Media format clauses unknown → V-MED-003 starts skipped/(to confirm)
+- Media format allowlist not in repo docs → V-MED-003 allowlist "(to confirm)", unknown formats = note
+- No media assets in AtlantisPB yet → media family skips on real repo (future-proofing)
 - Handoff DoD rows (tools/atlantis README, decisions.md, check:normative script) remain with the team — drafts in docs/
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
@@ -67,9 +68,9 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Milestone v0.2 created, ready to plan
-Next action: /paul:plan for Phase 5 (Media family)
-Resume file: .paul/ROADMAP.md
+Stopped at: Plan 05-01 created
+Next action: Approve, then /paul:apply .paul/phases/05-media/05-01-PLAN.md
+Resume file: .paul/phases/05-media/05-01-PLAN.md
 
 ---
 *STATE.md — Updated after every significant action*

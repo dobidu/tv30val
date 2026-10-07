@@ -25,7 +25,7 @@ Phases: 0 of 4 complete
 
 | Phase | Name | Plans | Status | Completed |
 |-------|------|-------|--------|-----------|
-| 5 | Media family (V-MED-001..004, new) | TBD | Not started | - |
+| 5 | Media family (V-MED-001..004, new) | 0/2 | Planning | - |
 | 6 | Module family (V-MOD-001..002; 003 needs API index) | TBD | Not started | - |
 | 7 | API index + app family (V-APP-001..011) | TBD | Blocked (api-index.json decision) | - |
 | 8 | Gating on blocking + v0.2 wrap-up | TBD | Not started | - |
