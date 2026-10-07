@@ -41,6 +41,7 @@ Normative conformance findings with a citable source on every check — and miss
 - ✓ Full check catalogue metadata (39 checks), `--list-checks` — Phase 1
 - ✓ Skip-never-pass; `pcap` family stub — Phase 1
 - ✓ XML family complete, V-XML-001..012 — Phase 2
+- ✓ Coherence family complete, V-COH-001..006 — Phase 4 (04-01)
 - ✓ Manifest family complete, V-MAN-001..006 + JSON Schema subset — Phase 3
 - ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
 
@@ -113,4 +114,4 @@ None yet.
 - Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 3*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 4 plan 01*
