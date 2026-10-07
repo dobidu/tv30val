@@ -9,16 +9,16 @@ version = "1.4"
 source = "https://chrisai.cv/skool"
 
 [milestone]
-name = "v0.1 Initial Release"
-version = "0.1.0"
-status = "complete"
+name = "v0.2 Media, modules, applications, gating"
+version = "0.2.0"
+status = "in_progress"
 phases = 4
 
 [phase]
-number = 4
-name = "Coherence family + DoD"
-status = "complete"
-plans_completed = 2
+number = 5
+name = "Media family"
+status = "not_started"
+plans_completed = 0
 
 [loop]
 position = "IDLE"
@@ -28,6 +28,6 @@ groom = true
 
 [stats]
 total_plans = 6
-total_phases = 4
+total_phases = 8
 completed_phases = 4
 last_activity = "2026-10-07T00:00:00Z"

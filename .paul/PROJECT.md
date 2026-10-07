@@ -31,7 +31,7 @@ Normative conformance findings with a citable source on every check — and miss
 
 - CLI contract (HANDOFF §4): targets by ID/path/all, `--family`, `--schemas`, `--severity`, `--json`, `--list-checks`; exit 0/1/2
 - Finding format (§5) with mandatory `source`, `(to confirm)` marks
-- Check families: `xml` (V-XML-001..012), `manifest` (V-MAN-001..006), `coherence` (V-COH-001..006), `app` (V-APP-001..011), `module` (V-MOD-001..003), `pcap` stub (skip)
+- Check families: `xml` (V-XML-001..012), `manifest` (V-MAN-001..006), `coherence` (V-COH-001..006), `media` (V-MED-001..004, added v0.2), `app` (V-APP-001..011), `module` (V-MOD-001..003), `pcap` stub (skip)
 - `api-index.json` data file for V-APP-006 / V-MOD-003 (generated once, reviewed as PR)
 - Tests under `test/` with fixtures per check; node built-in runner
 
@@ -50,7 +50,7 @@ Normative conformance findings with a citable source on every check — and miss
 None yet.
 
 ### Planned (Next)
-- v0.2: `app` family + `api-index.json` (blocked on commit permission), `module` family, gate on blocking
+- v0.2 (milestone created): media family (Phase 5), module family (6), API index + app family (7, blocked), gating + wrap-up (8)
 
 ### Out of Scope
 - PCAP/TS stream validation — no massa de teste, owner undefined; `pcap` family reports skipped only
@@ -87,6 +87,7 @@ None yet.
 | Load AtlantisPB catalog/layout/ids via require from --root | Principles 4/5: team modules answer IDs and paths | 2026-10-07 | Active |
 | V-XML-010: unknown st3- app = blocking, non-kebab name = note | Never pass silently, never guess | 2026-10-07 | Active |
 | Manifest card refs accept filler ranges; case omissions group-scoped | Matches schema doc and Annex B per-group manifests | 2026-10-07 | Active |
+| Add `media` family in v0.2 (not in handoff) | Media assets are artifacts too; form already covered by check-structure.js, content needs normative checks | 2026-10-07 | Active |
 | Integration: keep standalone; team gets docs | Proposal not yet approved; no writes to team repo | 2026-10-07 | Active |
 | Family modules with stub fallback | Each phase adds one file; skip until implemented | 2026-10-07 | Active |
 
@@ -115,4 +116,4 @@ None yet.
 - Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after v0.1 milestone*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after v0.2 milestone creation*
