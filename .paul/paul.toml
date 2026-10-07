@@ -1,5 +1,5 @@
 name = "tv30val"
-version = "0.0.0"
+version = "0.1.0-dev"
 status = "active"
 path = "tv30val"
 tags = []
@@ -15,20 +15,19 @@ status = "in_progress"
 phases = 4
 
 [phase]
-number = 1
-name = "Core"
+number = 2
+name = "XML family"
 status = "not_started"
 plans_completed = 0
 
 [loop]
-position = "APPLY"
-plan = "01-01"
-plan_path = "phases/01-core/01-01-PLAN.md"
+position = "IDLE"
 
 [satellite]
 groom = true
 
 [stats]
-total_plans = 0
+total_plans = 1
 total_phases = 4
+completed_phases = 1
 last_activity = "2026-10-07T00:00:00Z"

@@ -8,7 +8,7 @@ about: "tv30val"
 
 ## What This Is
 
-Dependency-free Node 18+ checker for `AtlantisTV3PB/AtlantisPB` (`tools/atlantis/validate-normative.js` + `tools/atlantis/normative/`). Answers one question per artifact: does it conform to what ABNT NBR 25608:2025 and the GT-ST Manual require? Complements existing form checks (lint-manual, check-structure, readme validate, catalog check, evidence) — does not rebuild them.
+Dependency-free Node 18.3+ checker for `AtlantisTV3PB/AtlantisPB` artifacts, built as standalone repo github.com/dobidu/tv30val and pointed at an AtlantisPB checkout via `--root` (handoff originally proposed `tools/atlantis/validate-normative.js` in-repo). Answers one question per artifact: does it conform to what ABNT NBR 25608:2025 and the GT-ST Manual require? Complements existing form checks (lint-manual, check-structure, readme validate, catalog check, evidence) — does not rebuild them.
 
 Full spec: `.paul/HANDOFF.md` (handoff of 2026-10-02).
 
@@ -21,8 +21,8 @@ Normative conformance findings with a citable source on every check — and miss
 | Attribute | Value |
 |-----------|-------|
 | Type | Application (CLI tool) |
-| Version | 0.0.0 |
-| Status | Initializing |
+| Version | 0.1.0-dev |
+| Status | Prototype — Phase 1 of 4 done |
 | Last Updated | 2026-10-07 |
 
 ## Requirements
@@ -33,10 +33,14 @@ Normative conformance findings with a citable source on every check — and miss
 - Finding format (§5) with mandatory `source`, `(to confirm)` marks
 - Check families: `xml` (V-XML-001..012), `manifest` (V-MAN-001..006), `coherence` (V-COH-001..006), `app` (V-APP-001..011), `module` (V-MOD-001..003), `pcap` stub (skip)
 - `api-index.json` data file for V-APP-006 / V-MOD-003 (generated once, reviewed as PR)
-- Tests under `tools/atlantis/test/` with fixtures per check; node built-in runner
+- Tests under `test/` with fixtures per check; node built-in runner
 
 ### Validated (Shipped)
-None yet.
+- ✓ CLI contract (§4) + `--root` for standalone use — Phase 1
+- ✓ Finding format (§5) with source copied from catalogue — Phase 1
+- ✓ Full check catalogue metadata (39 checks), `--list-checks` — Phase 1
+- ✓ Skip-never-pass; `pcap` family stub — Phase 1
+- ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
 
 ### Active (In Progress)
 None yet.
@@ -74,6 +78,9 @@ None yet.
 | `xmllint` shell-out for XSD (HANDOFF §7 opt 1) | Keeps repo dependency-free | 2026-10-07 | Active (pending team) |
 | Advisory only, not in `npm run check` | Team hasn't agreed to gate PRs | 2026-10-07 | Active |
 | v0.1 families: xml, manifest, coherence | HANDOFF §10.5 recommendation | 2026-10-07 | Active |
+| Standalone repo + `--root` instead of living in AtlantisPB | Build fast outside team repo; port later | 2026-10-07 | Active |
+| Node >=18.3 (`util.parseArgs`); `npm test` = `node --test` | No deps; works 18–24 | 2026-10-07 | Active |
+| Family modules with stub fallback | Each phase adds one file; skip until implemented | 2026-10-07 | Active |
 
 ## Success Metrics (Definition of Done, HANDOFF §9)
 
@@ -96,8 +103,8 @@ None yet.
 
 ## Open Questions (HANDOFF §10)
 
-- Target repo `AtlantisPB` not present in this working dir — where to build?
+- AtlantisPB checkout needed for real runs (layout.json shape, catalog.js API)
 - Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
 
 ---
-*Created: 2026-10-07*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 1*
