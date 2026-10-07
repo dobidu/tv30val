@@ -5,4 +5,5 @@ const xmlPath = (id) => {
   const a = catalog.requireArtifact(id);
   return `xmls/${a.type.toLowerCase()}/${ids.kebabId(a.id)}.xml`;
 };
-module.exports = { xmlPath };
+const appDir = (id) => `applications/${ids.kebabId(catalog.requireArtifact(id).id)}`;
+module.exports = { xmlPath, appDir };

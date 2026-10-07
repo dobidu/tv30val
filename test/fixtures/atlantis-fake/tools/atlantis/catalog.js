@@ -4,6 +4,11 @@ const ARTIFACTS = [
   { id: 'ST3_BALD_902', type: 'BALD', cases: ['ST3_F_TC_901_002'] },
   { id: 'ST3_BALD_903', type: 'BALD', cases: ['ST3_F_TC_901_003'] },
   { id: 'ST3_BALD_905', type: 'BALD', cases: ['ST3_F_TC_901_005'] },
+  { id: 'ST3_BALD_906', type: 'BALD', cases: ['ST3_F_TC_901_006', 'ST3_F_TC_901_007'] },
+  { id: 'ST3_BALD_907', type: 'BALD', cases: ['ST3_F_TC_901_008'] },
+  { id: 'ST3_BALD_908', type: 'BALD', cases: ['ST3_F_TC_901_008'] },
+  { id: 'ST3_BALD_909', type: 'BALD', cases: ['ST3_F_TC_901_008'] },
+  { id: 'ST3_F_3GHApp_901', type: 'APP', cases: ['ST3_F_TC_901_001'] },
   { id: 'ST3_PRRD_901', type: 'PRRD', cases: ['ST3_F_TC_901_001'] },
   { id: 'ST3_ESG_SERVICE_901', type: 'ESG', cases: ['ST3_F_TC_901_009'] },
 ];

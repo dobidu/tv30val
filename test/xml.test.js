@@ -123,11 +123,11 @@ test('V-XML-011 reports an incomplete ESG triple', () => {
   assert.match(f.message, /ST3_ESG_SCHEDULE_901, ST3_ESG_CONTENT_901/);
 });
 
-test('targets narrow the files; pending checks skip; no XML → all skipped', () => {
+test('targets narrow the files; no XML → all skipped', () => {
   let j = xmlRun(['ST3_BALD_901']);
   const paths = new Set(j.results.filter((r) => r.path && r.path.endsWith('.xml')).map((r) => r.path));
   assert.deepEqual([...paths], ['xmls/bald/st3-bald-901.xml']);
-  assert.match(of(j, 'V-XML-009')[0].reason, /plan 02-02/);
+  assert.ok(j.results.every((r) => !/not implemented/.test(r.reason || '')));
   j = xmlRun(['xmls/prrd']);
   assert.ok(j.results.every((r) => !r.path || !r.path.includes('bald')));
   j = cli(['--root', fs.mkdtempSync(path.join(os.tmpdir(), 'tv30val-')), '--family', 'xml', '--json']).json;

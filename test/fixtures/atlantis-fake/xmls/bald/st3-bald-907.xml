@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ST3_BALD_901 (BALD) — synthetic fixture v1.0 / group document ST3_F_G_901 v1.1
+  ST3_BALD_907 (BALD) — synthetic fixture v1.0 / group document ST3_F_G_901 v1.1
   Used by:
-  901_001: ST3_F_PCAP_901 (ST3_BALD_901)
+  901_008: ST3_F_PCAP_901 (ST3_BALD_907)
 
   Specification variant: none.
+
+  Validity windows: fixed date, see test plan.
 
   Assumptions to confirm:
     - appContextId and appId URNs are placeholders.
@@ -13,7 +15,8 @@
 <bald:BALD xmlns:bald="tag:sbtvd.org.br,2025:XMLSchemas/TV30/AppSignaling/BALD/1.0/">
   <bald:EntryPackage
       appContextId="urn:example:appcontext:901"
-      bcastEntryPackageUrl="st3-f-3ghapp-901.pkg"
+      validUntil="2000-01-01T00:00:00Z"
+      bcastEntryPackageUrl="st3-f-3ghapp-999.pkg"
       bcastEntryPointUrl="index.html"
       controlCode="AUTOSTART"/>
 </bald:BALD>
