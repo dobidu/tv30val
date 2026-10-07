@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.1 Initial Release
-Phase: 4 of 4 (Coherence family + DoD wrap-up)
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-10-07 — Phase 3 complete (03-01 unified), transitioned to Phase 4
+Phase: 4 of 4 (Coherence family + DoD wrap-up) — Planning
+Plan: 04-01 created, awaiting approval (04-02 = DoD wrap-up + integration decision)
+Status: PLAN created, ready for APPLY
+Last activity: 2026-10-07 — Created .paul/phases/04-coherence/04-01-PLAN.md
 
 Progress:
 - Milestone: [███████▌░░] 75%
@@ -29,7 +29,7 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
+  ✓        ○        ○     [Plan created, awaiting approval]
 ```
 
 ## Accumulated Context
@@ -53,7 +53,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 ### Blockers/Concerns
 - JSON Schema subset; unsupported keyword → skip (Phase 3)
 - Card ranges F01-F42 expanded; V-MAN-002 omissions group-scoped (Phase 3)
-- Phase 4: confirm sources for evidence, README versions, escalations, retired IDs before planning
+- Handoff DoD items live in AtlantisPB (README row, decisions.md, npm run check) — need user decision before touching it (plan 04-02)
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
@@ -64,9 +64,9 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Phase 3 complete, ready to plan Phase 4
-Next action: /paul:plan for Phase 4 (Coherence + DoD)
-Resume file: .paul/ROADMAP.md
+Stopped at: Plan 04-01 created
+Next action: Approve, then /paul:apply .paul/phases/04-coherence/04-01-PLAN.md
+Resume file: .paul/phases/04-coherence/04-01-PLAN.md
 
 ---
 *STATE.md — Updated after every significant action*

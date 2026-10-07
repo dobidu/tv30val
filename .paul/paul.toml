@@ -21,7 +21,9 @@ status = "not_started"
 plans_completed = 0
 
 [loop]
-position = "IDLE"
+position = "PLAN"
+plan = "04-01"
+plan_path = "phases/04-coherence/04-01-PLAN.md"
 
 [satellite]
 groom = true
