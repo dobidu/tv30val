@@ -16,24 +16,25 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.2 Media, modules, applications, gating
-Phase: 5 of 8 (Media family) — Applying
-Plan: 05-01 executed (3/3 PASS); 05-02 next
-Status: APPLY complete, ready for UNIFY
-Last activity: 2026-10-07 — Executed 05-01; 61 tests; 43-check catalogue; real repo: media all skipped (no assets)
+Phase: 5 of 8 (Media family) — In progress
+Plan: 05-01 complete; 05-02 (V-MED-004 HSTREAM content) not yet planned
+Status: Ready to plan 05-02
+Last activity: 2026-10-07 — 05-01 unified
 
 Progress:
-- v0.2: [░░░░░░░░░░] 0%
+- v0.2: [█░░░░░░░░░] 12%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [Applied, ready for UNIFY]
+  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- Media item = asset-folder entry (file or stream dir); allowlist to confirm; unknown format = note (Phase 5)
 - 2026-10-07: v0.2 adds a `media` family (beyond handoff); media first since unblocked
 - 2026-10-07: Integration = keep standalone; team gets docs/integration.md + docs/decisions-draft.md; no writes to AtlantisPB (Phase 4)
 - Standalone repo github.com/dobidu/tv30val; targets AtlantisPB checkout via --root (default cwd)
@@ -68,9 +69,9 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 05-01 applied
-Next action: /paul:unify .paul/phases/05-media/05-01-PLAN.md
-Resume file: .paul/phases/05-media/05-01-PLAN.md
+Stopped at: Plan 05-01 unified
+Next action: /paul:plan 05-02 (V-MED-004)
+Resume file: .paul/phases/05-media/05-01-SUMMARY.md
 
 ---
 *STATE.md — Updated after every significant action*

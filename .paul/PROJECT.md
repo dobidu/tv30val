@@ -47,7 +47,7 @@ Normative conformance findings with a citable source on every check — and miss
 - ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
 
 ### Active (In Progress)
-None yet.
+- [ ] Media family: V-MED-001..003 done (05-01), V-MED-004 next (05-02)
 
 ### Planned (Next)
 - v0.2 (milestone created): media family (Phase 5), module family (6), API index + app family (7, blocked), gating + wrap-up (8)
@@ -116,4 +116,4 @@ None yet.
 - Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after v0.2 milestone creation*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 5 plan 01*
