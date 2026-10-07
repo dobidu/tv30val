@@ -1,0 +1,32 @@
+name = "tv30val"
+version = "0.0.0"
+status = "active"
+path = "tv30val"
+tags = []
+
+[paul]
+version = "1.4"
+source = "https://chrisai.cv/skool"
+
+[milestone]
+name = "v0.1 Initial Release"
+version = "0.1.0"
+status = "not_started"
+phases = 4
+
+[phase]
+number = 0
+name = "None"
+status = "not_started"
+plans_completed = 0
+
+[loop]
+position = "IDLE"
+
+[satellite]
+groom = true
+
+[stats]
+total_plans = 0
+total_phases = 4
+last_activity = "2026-10-07T00:00:00Z"

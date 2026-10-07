@@ -1,0 +1,13 @@
+# Protected normative sources — never commit
+reference/
+*.pdf
+*.xsd
+
+# Internal handoff (not for public repo)
+.paul/HANDOFF.md
+
+node_modules/
+.DS_Store
+
+# Local tooling (third-party PAUL framework)
+.claude/
