@@ -12,24 +12,24 @@ source = "https://chrisai.cv/skool"
 name = "v0.2 Media, modules, applications, gating"
 version = "0.2.0"
 status = "in_progress"
-phases = 5
+phases = 4
 
 [phase]
 number = 8
 name = "Gating + v0.2 wrap-up"
-status = "not_started"
-plans_completed = 0
+status = "in_progress"
+plans_completed = 1
 
 [loop]
-position = "APPLY"
-plan = "08-01"
-plan_path = "phases/08-gating/08-01-PLAN.md"
+position = "PLAN"
+plan = "08-02"
+plan_path = "phases/08-gating/08-02-PLAN.md"
 
 [satellite]
 groom = true
 
 [stats]
-total_plans = 11
+total_plans = 12
 total_phases = 9
 completed_phases = 7
 last_activity = "2026-10-07T00:00:00Z"

@@ -9,7 +9,8 @@ about: "tv30val"
 | Version | Name | Phases | Status | Completed |
 |---------|------|--------|--------|-----------|
 | v0.1 | Initial Release | 1-4 | ✅ Shipped (tag v0.1.0) | 2026-10-07 |
-| v0.2 | Media, modules, applications, gating | 5-9 | 🚧 In Progress | - |
+| v0.2 | Media, modules, applications, gating | 5-8 | 🚧 In Progress | - |
+| v0.3 | API index, NCL/JSON schemas | 9- | 📋 Planned | - |
 
 ## v0.1 Initial Release ✅
 Core CLI, xml (V-XML-001..012), manifest (V-MAN-001..006), coherence (V-COH-001..006). 24 of 39 checks live; standalone, advisory. Release: https://github.com/dobidu/tv30val/releases/tag/v0.1.0
@@ -18,3 +19,6 @@ Core CLI, xml (V-XML-001..012), manifest (V-MAN-001..006), coherence (V-COH-001.
 **Goal:** cover the remaining artifact kinds — media assets (new `media` family), common modules, test applications — and propose gating on blocking findings.
 **Progress:** Phase 5 (media) ✅, Phase 6 (modules) ✅, Phase 7 (apps, index-free) ✅ 2026-10-07.
 **Blocker:** app family V-APP-006/007 and module V-MOD-003 need `api-index.json` (coordinators: may it be committed?) and the standard's Annexes C/D to generate it.
+
+## v0.3 API index, NCL/JSON schemas 📋
+Phase 9 (API index, moved from v0.2 on 2026-10-07, blocked); NCL profile and JSON schema validation from the complementary files.
