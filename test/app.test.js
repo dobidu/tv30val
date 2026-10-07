@@ -62,11 +62,36 @@ test('V-APP-005: README input artifacts match the catalogue both ways', () => {
   ]);
 });
 
-test('API checks wait for the index; 008..011 wait for plan 07-02', () => {
-  const reason = (c) => J.results.find((r) => r.check === c).reason;
+test('API checks wait for the index; result keys and language are not checked', () => {
+  const reason = (c) => J.results.find((r) => r.check === c && r.status === 'skipped').reason;
   assert.match(reason('V-APP-006'), /API index/);
   assert.match(reason('V-APP-007'), /API index/);
-  for (const c of ['V-APP-008', 'V-APP-009', 'V-APP-010', 'V-APP-011']) assert.match(reason(c), /07-02/);
+  assert.match(reason('V-APP-010'), /pending decision/);
+  assert.match(reason('V-APP-011'), /no language/);
+});
+
+test('V-APP-008: local URLs are notes, key codes should-fix, comments and configuration/ ignored', () => {
+  const f = res('V-APP-008', 'ST3_F_3GHApp_901');
+  assert.deepEqual(f.map((x) => [x.severity, x.location]), [['note', 'line 3'], ['should-fix', 'line 4']]);
+  assert.match(f[0].message, /localhost:9999\/api .*configuration\//);
+  assert.ok(!J.results.some((r) => (r.path || '').startsWith('configuration/')));
+});
+
+test('V-APP-009: tester UI and media from the common modules', () => {
+  const msgs = res('V-APP-009', 'ST3_F_3GHApp_901').map((x) => x.message);
+  assert.equal(msgs.length, 2);
+  assert.match(msgs[0], /results-box/);
+  assert.match(msgs[1], /audio-video-player/);
+  const ncl = res('V-APP-009', 'ST3_F_3GNApp_902').map((x) => x.message);
+  assert.deepEqual(ncl.map((m) => /does not use the ([a-z-]+)/.exec(m)[1]), ['buttons-box', 'results-box']);
+  assert.ok(J.results.some((r) => r.check === 'V-APP-009' && r.status === 'skipped' && /st3-f-3gnapp-901: no main\.ncl/.test(r.reason)));
+  assert.ok(!J.results.some((r) => r.check === 'V-APP-009' && /staging/.test(r.path || '')), 'fillers out of scope');
+});
+
+test('V-APP-011: placeholders in tester-facing text, not in comments', () => {
+  const f = res('V-APP-011', 'ST3_F_3GHApp_901');
+  assert.deepEqual(f.map((x) => `${x.path.split('/').pop()}:${x.location}`), ['index.html:line 8', 'main.js:line 4']);
+  assert.ok(f.every((x) => x.severity === 'note' && /not normative/.test(x.source)));
 });
 
 test('no application folders → all skipped', () => {
