@@ -17,9 +17,9 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 
 Milestone: v0.1 Initial Release
 Phase: 4 of 4 (Coherence family + DoD wrap-up) — In progress
-Plan: 04-01 complete; 04-02 (DoD wrap-up + integration decision) not yet planned
-Status: Ready to plan 04-02
-Last activity: 2026-10-07 — 04-01 unified
+Plan: 04-02 created, awaiting approval
+Status: PLAN created, ready for APPLY
+Last activity: 2026-10-07 — Created .paul/phases/04-coherence/04-02-PLAN.md
 
 Progress:
 - Milestone: [████████▊░] 87%
@@ -29,7 +29,7 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
+  ✓        ○        ○     [Plan created, awaiting approval]
 ```
 
 ## Accumulated Context
@@ -64,9 +64,9 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 04-01 unified
-Next action: /paul:plan 04-02 (DoD wrap-up)
-Resume file: .paul/phases/04-coherence/04-01-SUMMARY.md
+Stopped at: Plan 04-02 created
+Next action: Approve, then /paul:apply .paul/phases/04-coherence/04-02-PLAN.md
+Resume file: .paul/phases/04-coherence/04-02-PLAN.md
 
 ---
 *STATE.md — Updated after every significant action*
