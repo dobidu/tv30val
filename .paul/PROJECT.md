@@ -40,6 +40,7 @@ Normative conformance findings with a citable source on every check — and miss
 - ✓ Finding format (§5) with source copied from catalogue — Phase 1
 - ✓ Full check catalogue metadata (39 checks), `--list-checks` — Phase 1
 - ✓ Skip-never-pass; `pcap` family stub — Phase 1
+- ✓ XML structural checks V-XML-001..006, 011 — Phase 2 (02-01)
 - ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
 
 ### Active (In Progress)
@@ -80,6 +81,8 @@ None yet.
 | v0.1 families: xml, manifest, coherence | HANDOFF §10.5 recommendation | 2026-10-07 | Active |
 | Standalone repo + `--root` instead of living in AtlantisPB | Build fast outside team repo; port later | 2026-10-07 | Active |
 | Node >=18.3 (`util.parseArgs`); `npm test` = `node --test` | No deps; works 18–24 | 2026-10-07 | Active |
+| Pass results only when check ran with source available | Avoid false "nothing validated" | 2026-10-07 | Active |
+| Load AtlantisPB catalog/layout/ids via require from --root | Principles 4/5: team modules answer IDs and paths | 2026-10-07 | Active |
 | Family modules with stub fallback | Each phase adds one file; skip until implemented | 2026-10-07 | Active |
 
 ## Success Metrics (Definition of Done, HANDOFF §9)
@@ -107,4 +110,4 @@ None yet.
 - Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 1*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 2 plan 01*
