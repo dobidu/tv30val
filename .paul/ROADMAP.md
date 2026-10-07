@@ -22,7 +22,7 @@ Phases: 2 of 4 complete (50%)
 |-------|------|-------|--------|-----------|
 | 1 | Core: CLI, finding format, check registry, skip semantics, pcap stub | 1/1 | ✅ Complete | 2026-10-07 |
 | 2 | XML family (V-XML-001..012) via xmllint | 2/2 | ✅ Complete | 2026-10-07 |
-| 3 | Manifest family (V-MAN-001..006) + JSON Schema subset | TBD | Not started | - |
+| 3 | Manifest family (V-MAN-001..006) + JSON Schema subset | 0/1 | Planning | - |
 | 4 | Coherence family (V-COH-001..006) + DoD wrap-up (README row, decisions note) | TBD | Not started | - |
 
 **Next milestone (v0.2):** app family + `api-index.json` (V-APP-*), module family (V-MOD-*), gate on blocking.

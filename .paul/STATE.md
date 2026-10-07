@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.1 Initial Release
-Phase: 3 of 4 (Manifest family)
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-10-07 — Phase 2 complete (02-01, 02-02 unified), transitioned to Phase 3
+Phase: 3 of 4 (Manifest family) — Planning
+Plan: 03-01 created, awaiting approval
+Status: PLAN created, ready for APPLY
+Last activity: 2026-10-07 — Created .paul/phases/03-manifest/03-01-PLAN.md
 
 Progress:
 - Milestone: [█████░░░░░] 50%
@@ -29,7 +29,7 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
+  ✓        ○        ○     [Plan created, awaiting approval]
 ```
 
 ## Accumulated Context
@@ -51,7 +51,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - Real layout.json shape for test fixture (Phase 1)
 
 ### Blockers/Concerns
-- Phase 3: check which JSON Schema keywords Annex B schemas use before planning subset validator
+- Annex B schemas use 19 keywords; subset validator skips on anything else (Phase 3)
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
@@ -62,9 +62,9 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Phase 2 complete, ready to plan Phase 3
-Next action: /paul:plan for Phase 3 (Manifest family)
-Resume file: .paul/ROADMAP.md
+Stopped at: Plan 03-01 created
+Next action: Approve, then /paul:apply .paul/phases/03-manifest/03-01-PLAN.md
+Resume file: .paul/phases/03-manifest/03-01-PLAN.md
 
 ---
 *STATE.md — Updated after every significant action*
