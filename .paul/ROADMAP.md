@@ -13,8 +13,8 @@ Normative validator for AtlantisPB artifacts. v0.1 ships core CLI + xml, manifes
 ## Current Milestone
 
 **v0.1 Initial Release** (v0.1.0)
-Status: In progress
-Phases: 3 of 4 complete (75%)
+Status: ✅ Complete (v0.1.0, 2026-10-07)
+Phases: 4 of 4 complete (100%)
 
 ## Phases (draft — refine in /paul:plan)
 
@@ -23,7 +23,7 @@ Phases: 3 of 4 complete (75%)
 | 1 | Core: CLI, finding format, check registry, skip semantics, pcap stub | 1/1 | ✅ Complete | 2026-10-07 |
 | 2 | XML family (V-XML-001..012) via xmllint | 2/2 | ✅ Complete | 2026-10-07 |
 | 3 | Manifest family (V-MAN-001..006) + JSON Schema subset | 1/1 | ✅ Complete | 2026-10-07 |
-| 4 | Coherence family (V-COH-001..006) + DoD wrap-up (README row, decisions note) | 1/2 | In progress | - |
+| 4 | Coherence family (V-COH-001..006) + DoD wrap-up (README row, decisions note) | 2/2 | ✅ Complete | 2026-10-07 |
 
 **Next milestone (v0.2):** app family + `api-index.json` (V-APP-*), module family (V-MOD-*), gate on blocking.
 
@@ -38,7 +38,8 @@ All 12 xml checks live or skip with reason. 02-01 structural (001..006, 011), 02
 ### Phase 3: Manifest family ✅
 V-MAN-001..006 on a dependency-free JSON Schema subset. Real repo: A03/B01/B02 divergence (3 should-fix), 1 note, 77 pass.
 
-Phase 4 detailed during `/paul:plan`.
+### Phase 4: Coherence + DoD ✅
+04-01 coherence family V-COH-001..006; 04-02 v0.1.0 wrap-up (decisions draft, integration guide; integration decision: standalone).
 
 ---
 *Roadmap created: 2026-10-07*

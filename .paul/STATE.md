@@ -11,25 +11,24 @@ about: "tv30val"
 See: .paul/PROJECT.md (updated 2026-10-07)
 
 **Core value:** Normative conformance findings with a citable source on every check — missing sources = SKIP, never PASS.
-**Current focus:** v0.1 — Phase 4 (Coherence family + DoD)
+**Current focus:** v0.1.0 complete — next: v0.2 (app + module families) when unblocked
 
 ## Current Position
 
-Milestone: v0.1 Initial Release
-Phase: 4 of 4 (Coherence family + DoD wrap-up) — Applying
-Plan: 04-02 executed (2/2 auto PASS; checkpoint: standalone)
-Status: APPLY complete, ready for UNIFY
-Last activity: 2026-10-07 — Executed 04-02; v0.1.0; integration decision = standalone
+Milestone: v0.1 Initial Release — ✅ Complete (v0.1.0)
+Phase: 4 of 4 complete
+Plan: none
+Status: Milestone complete; ready for next milestone
+Last activity: 2026-10-07 — Phase 4 complete (04-01, 04-02 unified); v0.1 milestone complete
 
 Progress:
-- Milestone: [████████▊░] 87%
-- Phase 4: [█████░░░░░] 50%
+- Milestone: [██████████] 100%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [Applied, ready for UNIFY]
+  ✓        ✓        ✓     [Loop complete - milestone done]
 ```
 
 ## Accumulated Context
@@ -54,20 +53,21 @@ PLAN ──▶ APPLY ──▶ UNIFY
 ### Blockers/Concerns
 - JSON Schema subset; unsupported keyword → skip (Phase 3)
 - Card ranges F01-F42 expanded; V-MAN-002 omissions group-scoped (Phase 3)
+- v0.2 blocked on: api-index.json commit permission (coordinators)
 - Handoff DoD rows (tools/atlantis README, decisions.md, check:normative script) remain with the team — drafts in docs/
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
-Last commit: feat(03-manifest) phase commit
+Last commit: feat(04-coherence) phase commit
 Branch: main
 Feature branches merged: none
 
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 04-02 applied
-Next action: /paul:unify .paul/phases/04-coherence/04-02-PLAN.md
-Resume file: .paul/phases/04-coherence/04-02-PLAN.md
+Stopped at: v0.1 milestone complete
+Next action: share tv30val + docs with team; v0.2 via /paul:milestone once api-index.json question answered
+Resume file: .paul/ROADMAP.md
 
 ---
 *STATE.md — Updated after every significant action*

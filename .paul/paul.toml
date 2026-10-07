@@ -1,5 +1,5 @@
 name = "tv30val"
-version = "0.1.0-dev"
+version = "0.1.0"
 status = "active"
 path = "tv30val"
 tags = []
@@ -11,25 +11,23 @@ source = "https://chrisai.cv/skool"
 [milestone]
 name = "v0.1 Initial Release"
 version = "0.1.0"
-status = "in_progress"
+status = "complete"
 phases = 4
 
 [phase]
 number = 4
 name = "Coherence family + DoD"
-status = "in_progress"
-plans_completed = 1
+status = "complete"
+plans_completed = 2
 
 [loop]
-position = "APPLY"
-plan = "04-02"
-plan_path = "phases/04-coherence/04-02-PLAN.md"
+position = "IDLE"
 
 [satellite]
 groom = true
 
 [stats]
-total_plans = 5
+total_plans = 6
 total_phases = 4
-completed_phases = 3
+completed_phases = 4
 last_activity = "2026-10-07T00:00:00Z"

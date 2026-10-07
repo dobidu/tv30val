@@ -21,8 +21,8 @@ Normative conformance findings with a citable source on every check — and miss
 | Attribute | Value |
 |-----------|-------|
 | Type | Application (CLI tool) |
-| Version | 0.1.0-dev |
-| Status | Prototype — Phase 3 of 4 done |
+| Version | 0.1.0 |
+| Status | v0.1.0 released (standalone, advisory) |
 | Last Updated | 2026-10-07 |
 
 ## Requirements
@@ -41,7 +41,8 @@ Normative conformance findings with a citable source on every check — and miss
 - ✓ Full check catalogue metadata (39 checks), `--list-checks` — Phase 1
 - ✓ Skip-never-pass; `pcap` family stub — Phase 1
 - ✓ XML family complete, V-XML-001..012 — Phase 2
-- ✓ Coherence family complete, V-COH-001..006 — Phase 4 (04-01)
+- ✓ Coherence family complete, V-COH-001..006 — Phase 4
+- ✓ Decisions draft + integration guide for the team — Phase 4
 - ✓ Manifest family complete, V-MAN-001..006 + JSON Schema subset — Phase 3
 - ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
 
@@ -49,8 +50,7 @@ Normative conformance findings with a citable source on every check — and miss
 None yet.
 
 ### Planned (Next)
-- v0.1: core + `xml`, `manifest`, `coherence`
-- then `app` (needs API index), then `module`
+- v0.2: `app` family + `api-index.json` (blocked on commit permission), `module` family, gate on blocking
 
 ### Out of Scope
 - PCAP/TS stream validation — no massa de teste, owner undefined; `pcap` family reports skipped only
@@ -87,17 +87,18 @@ None yet.
 | Load AtlantisPB catalog/layout/ids via require from --root | Principles 4/5: team modules answer IDs and paths | 2026-10-07 | Active |
 | V-XML-010: unknown st3- app = blocking, non-kebab name = note | Never pass silently, never guess | 2026-10-07 | Active |
 | Manifest card refs accept filler ranges; case omissions group-scoped | Matches schema doc and Annex B per-group manifests | 2026-10-07 | Active |
+| Integration: keep standalone; team gets docs | Proposal not yet approved; no writes to team repo | 2026-10-07 | Active |
 | Family modules with stub fallback | Each phase adds one file; skip until implemented | 2026-10-07 | Active |
 
 ## Success Metrics (Definition of Done, HANDOFF §9)
 
 | Metric | Target | Current | Status |
 |--------|--------|---------|--------|
-| `--list-checks` prints every check + clause | all checks | - | Not started |
-| Run over repo: all findings explainable (A03/B01/B02, missing PCAPs, absent XSDs) | 0 unjustified | - | Not started |
-| `npm run test:tools` green incl. new tests (missing schema → skipped + exit 0; every check emits `source`) | green | - | Not started |
-| Tool passes `npm run check` | pass | - | Not started |
-| `tools/atlantis/README.md` row + `decisions.md` note | done | - | Not started |
+| `--list-checks` prints every check + clause | all checks | 39/39 | Achieved |
+| Run over repo: all findings explainable | 0 unjustified | 0 unjustified | Achieved |
+| Tests green incl. missing schema → skipped + exit 0; every check emits `source` | green | 54 pass | Achieved |
+| Tool passes `npm run check` | pass | n/a standalone | Deferred to team |
+| `tools/atlantis/README.md` row + `decisions.md` note | done | drafted in docs/ | Team-owned |
 
 ## Tech Stack / Tools
 
@@ -114,4 +115,4 @@ None yet.
 - Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 4 plan 01*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after v0.1 milestone*
