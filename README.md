@@ -11,8 +11,9 @@ It complements the existing form checks in `tools/atlantis/` (coding standard,
 repository structure, README structure, catalogue IDs, evidence shape). It does
 not replace them.
 
-> **Status:** v0.0 — under construction. Proposal, not yet adopted by the team.
-> Advisory only; not part of any PR gate.
+> **Status:** v0.1 in progress — CLI, catalogue and skip semantics work; every
+> check family still reports `skipped` until implemented. Proposal, not yet
+> adopted by the team. Advisory only; not part of any PR gate.
 
 ## Principles
 
@@ -27,22 +28,33 @@ not replace them.
 6. **No runtime dependencies.** Plain Node.
 7. **Read-only.** The validator never modifies artifacts.
 
-## Usage (planned)
+## Usage
+
+Requires Node 18.3+. Point `--root` at an AtlantisPB checkout (default: the
+current directory).
 
 ```
-node validate-normative.js [target …] [options]
+node bin/validate-normative.js [target …] [options]
 
-  target            artifact ID (ST3_F_3GHApp_009, ST3_BALD_032), a path,
-                    or omitted for everything the layout governs
+  target            artifact ID (ST3_F_3GHApp_009, ST3_BALD_032), a path
+                    relative to --root, or omitted for everything
+  --root <dir>      AtlantisPB checkout to validate (default: cwd)
   --family <f>      xml | app | module | manifest | coherence | pcap  (repeatable)
-  --schemas <dir>   XSD directory
-  --severity <s>    minimum severity to report (default: note)
+  --schemas <dir>   XSD directory (else $ATLANTIS_SCHEMAS, else <root>/reference/schemas)
+  --severity <s>    minimum severity to report: note | should-fix | blocking
   --json            machine-readable output
   --list-checks     print the check catalogue with clauses and exit
+  -h, --help        show help
 ```
 
 Exit codes: `0` no blocking finding · `1` at least one blocking finding ·
-`2` the tool could not run. `skipped` never changes the exit code.
+`2` the tool could not run (bad argument, missing root, unreadable `--schemas`).
+`skipped` never changes the exit code. `--severity` filters findings only;
+skips are always reported, and a run where everything skipped prints a warning.
+
+Every run starts by reporting which sources it found under the root
+(`tools/atlantis/layout.json`, `tools/atlantis/catalog.js`, the schema
+directory, `xmllint`) and why any are missing.
 
 ### Finding format
 
@@ -95,6 +107,10 @@ otherwise schema checks report `skipped` with an install hint.
 ```
 npm test        # node --test, no framework
 ```
+
+Layout: `bin/validate-normative.js` (entry), `lib/catalogue.js` (check
+catalogue with clauses), `lib/families/` (one module per family; missing
+modules fall back to a stub that skips), `lib/{args,context,runner,report,finding}.js`.
 
 Planning artifacts live in `.paul/`.
 

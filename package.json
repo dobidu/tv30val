@@ -1,0 +1,17 @@
+{
+  "name": "tv30val",
+  "version": "0.1.0-dev",
+  "description": "Normative artifact validator for TV 3.0 (ABNT NBR 25608:2025) test-suite artifacts",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">=18.3"
+  },
+  "bin": {
+    "validate-normative": "bin/validate-normative.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check:normative": "node bin/validate-normative.js"
+  }
+}
