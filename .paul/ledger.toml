@@ -70,3 +70,9 @@ action = "plan"
 phase = 3
 plan = "03-01"
 at = "2026-10-07T00:00:00Z"
+
+[[entry]]
+action = "apply"
+phase = 3
+plan = "03-01"
+at = "2026-10-07T00:00:00Z"

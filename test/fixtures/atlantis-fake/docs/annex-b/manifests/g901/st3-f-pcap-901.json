@@ -1,0 +1,35 @@
+{
+  "id": "ST3_F_PCAP_901",
+  "group": "ST3_F_G_901",
+  "cases": [
+    "ST3_F_TC_901_001",
+    "ST3_F_TC_901_002"
+  ],
+  "signaling": {
+    "applications": [
+      {
+        "card": "A01"
+      },
+      {
+        "card": "F01-F02"
+      }
+    ]
+  },
+  "expectedCatalog": {
+    "orderRule": "ascending virtual channel (synthetic rule)",
+    "entries": [
+      {
+        "card": "A01",
+        "virtualChannel": "10.1"
+      },
+      {
+        "card": "A02",
+        "virtualChannel": "20.1"
+      },
+      {
+        "card": "F01",
+        "virtualChannel": "60.1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Synthetic cards schema (test fixture)",
+  "type": "object",
+  "required": [
+    "cards"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "card": {
+      "type": "object",
+      "required": [
+        "label",
+        "virtualChannel",
+        "state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "pattern": "^[A-Z]\\d{2}$"
+        },
+        "virtualChannel": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+$"
+        },
+        "state": {
+          "enum": [
+            "built",
+            "proposed"
+          ]
+        },
+        "builtIn": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "built"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "builtIn"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "properties": {
+    "cardsVersion": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/card"
+      }
+    }
+  }
+}

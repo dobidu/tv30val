@@ -1,1 +1,10 @@
-{ "preset": "manual", "presets": { "manual": { "xml": "xmls/{xmlType}/{kebabId}.xml" } } }
+{
+  "preset": "manual",
+  "presets": {
+    "manual": {
+      "xml": "xmls/{xmlType}/{kebabId}.xml",
+      "annexB": "docs/annex-b",
+      "fillerGroup": "applications-staging"
+    }
+  }
+}

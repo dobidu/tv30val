@@ -9,10 +9,20 @@ const ARTIFACTS = [
   { id: 'ST3_BALD_908', type: 'BALD', cases: ['ST3_F_TC_901_008'] },
   { id: 'ST3_BALD_909', type: 'BALD', cases: ['ST3_F_TC_901_008'] },
   { id: 'ST3_F_3GHApp_901', type: 'APP', cases: ['ST3_F_TC_901_001'] },
+  { id: 'ST3_F_PCAP_901', type: 'F_PCAP', cases: ['ST3_F_TC_901_001', 'ST3_F_TC_901_002', 'ST3_F_TC_902_001'] },
+  { id: 'ST3_F_PCAP_902', type: 'F_PCAP', cases: ['ST3_F_TC_901_003', 'ST3_F_TC_901_004'] },
   { id: 'ST3_PRRD_901', type: 'PRRD', cases: ['ST3_F_TC_901_001'] },
   { id: 'ST3_ESG_SERVICE_901', type: 'ESG', cases: ['ST3_F_TC_901_009'] },
 ];
 const map = new Map(ARTIFACTS.map((a) => [a.id, a]));
+const CASES = new Map();
+for (const a of ARTIFACTS) {
+  for (const c of a.cases) {
+    if (!CASES.has(c)) CASES.set(c, { id: c, group: `ST3_F_G_${c.slice(9, 12)}`, artifacts: [] });
+    CASES.get(c).artifacts.push({ id: a.id, type: a.type });
+  }
+}
+const findCase = (id) => CASES.get(id) || null;
 const load = () => ({ artifacts: map });
 const findArtifact = (id) => map.get(id) || null;
 const requireArtifact = (id) => {
@@ -20,4 +30,4 @@ const requireArtifact = (id) => {
   if (!a) throw new Error(`Unknown artifact ${id}`);
   return a;
 };
-module.exports = { load, findArtifact, requireArtifact };
+module.exports = { load, findArtifact, requireArtifact, findCase };

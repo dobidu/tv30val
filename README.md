@@ -12,8 +12,8 @@ repository structure, README structure, catalogue IDs, evidence shape). It does
 not replace them.
 
 > **Status:** v0.1 in progress — CLI, catalogue and skip semantics work;
-> the `xml` family (V-XML-001..012) is complete. Other families report
-> `skipped` until implemented. Proposal, not yet
+> the `xml` (V-XML-001..012) and `manifest` (V-MAN-001..006) families are
+> complete. Other families report `skipped` until implemented. Proposal, not yet
 > adopted by the team. Advisory only; not part of any PR gate.
 
 ## Principles
@@ -81,7 +81,7 @@ rather than verified against the standard itself.
 | Family | Scope | Checks | Milestone |
 |---|---|---|---|
 | `xml` | BALD, BAMT, PRRD, ESG, AEAT signalling | V-XML-001..012 | v0.1 ✓ |
-| `manifest` | BTDS Annex B manifests and `cards.json` | V-MAN-001..006 | v0.1 |
+| `manifest` | BTDS Annex B manifests and `cards.json` | V-MAN-001..006 | v0.1 ✓ |
 | `coherence` | Cross-artifact consistency with the catalogue | V-COH-001..006 | v0.1 |
 | `app` | Test applications, API usage vs. Annexes C/D | V-APP-001..011 | v0.2 |
 | `module` | Common modules | V-MOD-001..003 | v0.2 |
@@ -100,6 +100,10 @@ reference/                      # gitignored
 
 Schema directory resolution: `--schemas <dir>` → `$ATLANTIS_SCHEMAS` →
 `reference/schemas/` → skip with reason.
+
+Annex B manifests are validated by a built-in JSON Schema (2020-12) subset
+covering exactly the keywords the Annex B schemas use; a schema with any other
+keyword makes V-MAN-001 report `skipped`, never pass.
 
 XSD validation shells out to `xmllint` (libxml2) when it is on `PATH`;
 otherwise schema checks report `skipped` with an install hint.

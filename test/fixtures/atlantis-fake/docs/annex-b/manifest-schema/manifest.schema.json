@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Synthetic manifest schema (test fixture)",
+  "type": "object",
+  "required": [
+    "id",
+    "group",
+    "cases"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "required": [
+        "card"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "card": {
+          "type": "string",
+          "minLength": 1
+        },
+        "virtualChannel": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ST3_F_PCAP_\\d{3}$"
+    },
+    "group": {
+      "type": "string"
+    },
+    "cases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "signaling": {
+      "type": "object",
+      "properties": {
+        "applications": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        }
+      }
+    },
+    "expectedCatalog": {
+      "type": "object",
+      "properties": {
+        "orderRule": {
+          "type": "string"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        }
+      }
+    },
+    "combinations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "expectedCatalog": {
+            "$ref": "#/properties/expectedCatalog"
+          }
+        }
+      }
+    }
+  }
+}

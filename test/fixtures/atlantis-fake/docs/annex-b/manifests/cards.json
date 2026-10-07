@@ -1,0 +1,33 @@
+{
+  "cardsVersion": "0.1-synthetic",
+  "cards": [
+    {
+      "label": "A01",
+      "virtualChannel": "10.1",
+      "state": "built",
+      "builtIn": "applications-staging/g901-built"
+    },
+    {
+      "label": "A02",
+      "virtualChannel": "20.1",
+      "state": "proposed",
+      "builtIn": "applications-staging/g901-proposed"
+    },
+    {
+      "label": "A03",
+      "virtualChannel": "10.1",
+      "state": "built",
+      "builtIn": "applications-staging/g901-missing"
+    },
+    {
+      "label": "F01",
+      "virtualChannel": "60.1",
+      "state": "proposed"
+    },
+    {
+      "label": "F02",
+      "virtualChannel": "60.2",
+      "state": "proposed"
+    }
+  ]
+}
