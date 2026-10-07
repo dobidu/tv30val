@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.1 Initial Release
-Phase: 2 of 4 (XML family)
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-10-07 — Phase 1 complete (01-01 unified), transitioned to Phase 2
+Phase: 2 of 4 (XML family) — Planning
+Plan: 02-01 created, awaiting approval (02-02 = header/semantic checks, next)
+Status: PLAN created, ready for APPLY
+Last activity: 2026-10-07 — Created .paul/phases/02-xml/02-01-PLAN.md
 
 Progress:
 - Milestone: [██▌░░░░░░░] 25%
@@ -29,13 +29,14 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
+  ✓        ○        ○     [Plan created, awaiting approval]
 ```
 
 ## Accumulated Context
 
 ### Decisions
 - Standalone repo github.com/dobidu/tv30val; targets AtlantisPB checkout via --root (default cwd)
+- Consume AtlantisPB catalog.js/layout.js/ids.js via require from --root (Phase 2)
 - Family = lib/families/<name>.js; absent module → stub skips (Phase 1)
 - engines node >=18.3; npm test = `node --test` (Phase 1)
 - Quick-and-dirty mode; handoff recommendations = defaults (xmllint, advisory, v0.1 = xml/manifest/coherence)
@@ -47,7 +48,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 
 ### Blockers/Concerns
 - Phase 2+: need AtlantisPB checkout for real runs
-- Phase 2: how to consume catalog.js (require vs spawn) — needed for V-XML-006/008
+- AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
 Last commit: see `git log` (phase 1 feat commit)
@@ -57,9 +58,9 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Phase 1 complete, ready to plan Phase 2
-Next action: /paul:plan for Phase 2 (XML family)
-Resume file: .paul/ROADMAP.md
+Stopped at: Plan 02-01 created
+Next action: Approve, then /paul:apply .paul/phases/02-xml/02-01-PLAN.md
+Resume file: .paul/phases/02-xml/02-01-PLAN.md
 
 ---
 *STATE.md — Updated after every significant action*
