@@ -12,7 +12,7 @@ repository structure, README structure, catalogue IDs, evidence shape). It does
 not replace them.
 
 > **Status:** v0.1.0 — the `xml`, `manifest` and `coherence` families are
-> complete (24 of 39 checks). `app` and `module` (v0.2) and `pcap` (deferred)
+> complete (24 of 39 v0.1 checks); v0.2 adds `media` (in progress). `app` and `module` (v0.2) and `pcap` (deferred)
 > report `skipped`. Proposal, not yet adopted by the team; advisory only, not
 > part of any PR gate. See [docs/integration.md](docs/integration.md) and
 > [docs/decisions-draft.md](docs/decisions-draft.md).
@@ -41,7 +41,7 @@ node bin/validate-normative.js [target …] [options]
   target            artifact ID (ST3_F_3GHApp_009, ST3_BALD_032), a path
                     relative to --root, or omitted for everything
   --root <dir>      AtlantisPB checkout to validate (default: cwd)
-  --family <f>      xml | app | module | manifest | coherence | pcap  (repeatable)
+  --family <f>      xml | app | module | manifest | coherence | media | pcap  (repeatable)
   --schemas <dir>   XSD directory (else $ATLANTIS_SCHEMAS, else <root>/reference/schemas)
   --severity <s>    minimum severity to report: note | should-fix | blocking
   --json            machine-readable output
@@ -115,6 +115,7 @@ rather than verified against the standard itself.
 | `xml` | BALD, BAMT, PRRD, ESG, AEAT signalling | V-XML-001..012 | v0.1 ✓ |
 | `manifest` | BTDS Annex B manifests and `cards.json` | V-MAN-001..006 | v0.1 ✓ |
 | `coherence` | Cross-artifact consistency with the catalogue | V-COH-001..006 | v0.1 ✓ |
+| `media` | Media assets in `assets/` (catalogued IDs, content vs extension, kind vs folder, stream content) | V-MED-001..004 | v0.2 (001..003 ✓) |
 | `app` | Test applications, API usage vs. Annexes C/D | V-APP-001..011 | v0.2 |
 | `module` | Common modules | V-MOD-001..003 | v0.2 |
 | `pcap` | PCAP/TS streams | — (always `skipped`) | deferred |

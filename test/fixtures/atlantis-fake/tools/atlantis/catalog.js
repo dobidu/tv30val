@@ -13,6 +13,9 @@ const ARTIFACTS = [
   { id: 'ST3_F_3GHApp_902_SCRIPT', type: 'F_3GHApp', cases: ['ST3_F_TC_901_010'], groups: ['ST3_F_G_901'] },
   { id: 'ST3_F_PCAP_901', type: 'F_PCAP', cases: ['ST3_F_TC_901_001', 'ST3_F_TC_901_002', 'ST3_F_TC_902_001'] },
   { id: 'ST3_F_PCAP_902', type: 'F_PCAP', cases: ['ST3_F_TC_901_003', 'ST3_F_TC_901_004'] },
+  { id: 'ST3_HSTREAM_901', type: 'HSTREAM', cases: ['ST3_F_TC_901_001'] },
+  { id: 'ST3_HSTREAM_902', type: 'HSTREAM', cases: ['ST3_F_TC_903_001'] },
+  { id: 'ST3_AUDIO_901', type: 'AUDIO', cases: ['ST3_F_TC_901_002'] },
   { id: 'ST3_PRRD_901', type: 'PRRD', cases: ['ST3_F_TC_901_001'] },
   { id: 'ST3_ESG_SERVICE_901', type: 'ESG', cases: ['ST3_F_TC_901_009'] },
 ];

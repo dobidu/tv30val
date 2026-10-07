@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.2 Media, modules, applications, gating
-Phase: 5 of 8 (Media family) — Planning
-Plan: 05-01 created, awaiting approval (05-02 = V-MED-004 HSTREAM manifests)
-Status: PLAN created, ready for APPLY
-Last activity: 2026-10-07 — Created .paul/phases/05-media/05-01-PLAN.md
+Phase: 5 of 8 (Media family) — Applying
+Plan: 05-01 executed (3/3 PASS); 05-02 next
+Status: APPLY complete, ready for UNIFY
+Last activity: 2026-10-07 — Executed 05-01; 61 tests; 43-check catalogue; real repo: media all skipped (no assets)
 
 Progress:
 - v0.2: [░░░░░░░░░░] 0%
@@ -28,7 +28,7 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ○        ○     [Plan created, awaiting approval]
+  ✓        ✓        ○     [Applied, ready for UNIFY]
 ```
 
 ## Accumulated Context
@@ -68,8 +68,8 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 05-01 created
-Next action: Approve, then /paul:apply .paul/phases/05-media/05-01-PLAN.md
+Stopped at: Plan 05-01 applied
+Next action: /paul:unify .paul/phases/05-media/05-01-PLAN.md
 Resume file: .paul/phases/05-media/05-01-PLAN.md
 
 ---
