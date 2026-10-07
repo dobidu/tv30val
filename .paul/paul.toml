@@ -15,21 +15,19 @@ status = "in_progress"
 phases = 5
 
 [phase]
-number = 7
-name = "App family without API index"
-status = "in_progress"
-plans_completed = 1
+number = 8
+name = "Gating + v0.2 wrap-up"
+status = "not_started"
+plans_completed = 0
 
 [loop]
-position = "APPLY"
-plan = "07-02"
-plan_path = "phases/07-app/07-02-PLAN.md"
+position = "IDLE"
 
 [satellite]
 groom = true
 
 [stats]
-total_plans = 10
+total_plans = 11
 total_phases = 9
-completed_phases = 6
+completed_phases = 7
 last_activity = "2026-10-07T00:00:00Z"

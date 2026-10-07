@@ -21,13 +21,13 @@ Normative validator for AtlantisPB artifacts. v0.1 shipped core CLI + xml, manif
 
 **v0.2 Media, modules, applications, gating** (v0.2.0)
 Status: 🚧 In Progress
-Phases: 2 of 5 complete
+Phases: 3 of 5 complete
 
 | Phase | Name | Plans | Status | Completed |
 |-------|------|-------|--------|-----------|
 | 5 | Media family (V-MED-001..004, new) | 2/2 | ✅ Complete | 2026-10-07 |
 | 6 | Module family (V-MOD-001..002; 003 needs API index) | 1/1 | ✅ Complete | 2026-10-07 |
-| 7 | App family without API index (V-APP-001..005, 008..011) | 1/2 | In progress | - |
+| 7 | App family without API index (V-APP-001..005, 008..011) | 2/2 | ✅ Complete | 2026-10-07 |
 | 8 | Gating on blocking + v0.2 wrap-up | TBD | Not started | - |
 | 9 | API index + V-APP-006/007 + V-MOD-003 | TBD | Blocked (api-index.json decision + NBR 25608 Annexes C/D) | - |
 
@@ -43,7 +43,9 @@ V-MOD-001..002 against the Manual v1.0 §6.5.5 list; real repo: 1 recorded-devia
 **Goal:** V-MOD-001 module folders vs Manual §6.5.5 list (+ declared additions), V-MOD-002 no app-specific logic / hard-coded case data in modules. V-MOD-003 skipped until the API index exists.
 **Depends on:** v0.1. **Research:** Unlikely.
 
-### Phase 7: App family without the API index
+### Phase 7: App family without the API index ✅
+Real repo: 5 V-APP-008 notes (inline emulator WebServices URL); everything else passes.
+
 **Goal:** V-APP-001..005 (07-01: folder/ID, entry point vs signalling, package hygiene, README cases, README input artifacts) and V-APP-008..011 (07-02: configuration placement, common-module use, result keys, placeholders). Split from the original Phase 7 on 2026-10-07 so unblocked checks ship.
 **Depends on:** v0.1 adapter. **Research:** done (Manual §6.5.4–6.5.7 read from the PDF).
 

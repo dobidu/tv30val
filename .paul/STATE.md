@@ -11,29 +11,30 @@ about: "tv30val"
 See: .paul/PROJECT.md (updated 2026-10-07)
 
 **Core value:** Normative conformance findings with a citable source on every check — missing sources = SKIP, never PASS.
-**Current focus:** v0.2 — Phase 7 (app family without API index)
+**Current focus:** v0.2 — Phase 8 (gating + v0.2.0 release)
 
 ## Current Position
 
 Milestone: v0.2 Media, modules, applications, gating
-Phase: 7 of 9 (App family without API index) — Applying
-Plan: 07-02 executed (2/2 PASS)
-Status: APPLY complete, ready for UNIFY
-Last activity: 2026-10-07 — Executed 07-02; 84 tests; real: 5 V-APP-008 notes (emulator URL)
+Phase: 8 of 9 (Gating + v0.2 wrap-up)
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-10-07 — Phase 7 complete (07-01, 07-02 unified)
 
 Progress:
-- v0.2: [█████▌░░░░] 55%
+- v0.2: [███████░░░] 70%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [Applied, ready for UNIFY]
+  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- Local URLs in app code = note; V-APP-011 reclassified as team convention (Phase 7)
 - V-APP-003 counts loaded references only; README tables by column name (Phase 7)
 - 2026-10-07: Phase 7 split — index-free app checks now; API index → Phase 9 (blocked)
 - V-APP-011 language: Manual sets no rule → skipped; placeholders = team-convention note
@@ -68,16 +69,16 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
-Last commit: feat(06-module) phase commit
+Last commit: feat(07-app) phase commit
 Branch: main
 Feature branches merged: none
 
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 07-02 applied
-Next action: /paul:unify .paul/phases/07-app/07-02-PLAN.md
-Resume file: .paul/phases/07-app/07-02-PLAN.md
+Stopped at: Phase 7 complete, ready to plan Phase 8
+Next action: /paul:plan for Phase 8 (gating + v0.2.0)
+Resume file: .paul/ROADMAP.md
 
 ---
 *STATE.md — Updated after every significant action*

@@ -22,7 +22,7 @@ Normative conformance findings with a citable source on every check — and miss
 |-----------|-------|
 | Type | Application (CLI tool) |
 | Version | 0.1.0 |
-| Status | v0.1.0 released; v0.2 in progress (Phases 5-6 done, 7 blocked) |
+| Status | v0.1.0 released; v0.2 in progress (Phases 5-7 done, 9 blocked) |
 | Last Updated | 2026-10-07 |
 
 ## Requirements
@@ -44,13 +44,13 @@ Normative conformance findings with a citable source on every check — and miss
 - ✓ Coherence family complete, V-COH-001..006 — Phase 4
 - ✓ Media family complete, V-MED-001..004 — Phase 5
 - ✓ Module family V-MOD-001..002 — Phase 6
-- ✓ App family V-APP-001..005 — Phase 7 (07-01)
+- ✓ App family V-APP-001..005, 008..011 — Phase 7
 - ✓ Decisions draft + integration guide for the team — Phase 4
 - ✓ Manifest family complete, V-MAN-001..006 + JSON Schema subset — Phase 3
 - ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
 
 ### Active (In Progress)
-- [ ] App family: V-APP-001..005 done (07-01); 008..011 next (07-02)
+- [ ] Gating + v0.2.0 (Phase 8)
 - [ ] API index (Phase 9) — blocked on external input
 
 ### Planned (Next)
@@ -121,4 +121,4 @@ Normative conformance findings with a citable source on every check — and miss
 - Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 7 plan 01*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 7*
