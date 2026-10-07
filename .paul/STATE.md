@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.2 Media, modules, applications, gating
-Phase: 8 of 8 (Gating + v0.2 wrap-up) — Planning
-Plan: 08-01 complete; 08-02 created, awaiting approval
-Status: PLAN created, ready for APPLY
-Last activity: 2026-10-07 — 08-01 unified; created 08-02-PLAN.md; Phase 9 → v0.3
+Phase: 8 of 8 (Gating + v0.2 wrap-up) — Applying
+Plan: 08-02 executed (2/2 PASS); v0.2.0 released
+Status: APPLY complete, ready for UNIFY
+Last activity: 2026-10-07 — Executed 08-02; official XSDs live; 9 real PRRD findings match team backlog; v0.2.0
 
 Progress:
 - v0.2: [████████░░] 85%
@@ -28,7 +28,7 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ○        ○     [Plan created, awaiting approval]
+  ✓        ✓        ○     [Applied, ready for UNIFY]
 ```
 
 ## Accumulated Context
@@ -78,8 +78,8 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 08-02 created
-Next action: Approve, then /paul:apply .paul/phases/08-gating/08-02-PLAN.md
+Stopped at: Plan 08-02 applied, v0.2.0 released
+Next action: /paul:unify .paul/phases/08-gating/08-02-PLAN.md (closes v0.2)
 Resume file: .paul/phases/08-gating/08-02-PLAN.md
 
 ---

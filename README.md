@@ -11,10 +11,10 @@ It complements the existing form checks in `tools/atlantis/` (coding standard,
 repository structure, README structure, catalogue IDs, evidence shape). It does
 not replace them.
 
-> **Status:** v0.1.0 — the `xml`, `manifest` and `coherence` families are
-> complete (24 of 39 v0.1 checks); v0.2 adds `media` (V-MED-001..004) and
-> `module` (V-MOD-001..002) and `app` (V-APP-001..005, 008..011). The API checks
-> (V-APP-006/007, V-MOD-003) need the API index; `pcap` is deferred. Proposal, not yet adopted by the team; advisory only, not
+> **Status:** v0.2.0 — families `xml`, `manifest`, `coherence`, `media`,
+> `module` and `app` (40 of 43 checks run; V-APP-006/007 and V-MOD-003 need the
+> API index, planned for v0.3; `pcap` is deferred). XML is validated against
+> the official NBR 25608 XSDs that AtlantisPB commits. Proposal, not yet adopted by the team; advisory only, not
 > part of any PR gate. See [docs/integration.md](docs/integration.md) and
 > [docs/decisions-draft.md](docs/decisions-draft.md).
 
@@ -126,8 +126,9 @@ rather than verified against the standard itself.
 
 ## Normative sources
 
-The standard and its XSDs are protected documents and are **never committed**.
-Place them outside version control:
+The standard is a protected document and is **never committed** to tv30val.
+AtlantisPB commits the standard's complementary files (XSDs) by team
+decision; other sources can live outside version control:
 
 ```
 reference/                      # gitignored
@@ -136,7 +137,9 @@ reference/                      # gitignored
 ```
 
 Schema directory resolution: `--schemas <dir>` → `$ATLANTIS_SCHEMAS` →
-`reference/schemas/` → skip with reason.
+`reference/schemas/` → AtlantisPB's committed
+`docs/specs/abnt-nbr-25608-2025-complementary-files/` (team decision of
+2026-10-07) → skip with reason. XSDs are looked up by name in subfolders.
 
 Annex B manifests are validated by a built-in JSON Schema (2020-12) subset
 covering exactly the keywords the Annex B schemas use; a schema with any other
@@ -149,8 +152,10 @@ checks on the DASH/HLS manifest. Descriptions no manifest can prove (dialogue
 enhancement, ratings, preference-dependent tracks, external URLs) report
 `skipped` with the description as the reason. Segments are not decoded.
 
-XSD validation shells out to `xmllint` (libxml2) when it is on `PATH`;
-otherwise schema checks report `skipped` with an install hint.
+XSD validation shells out to `xmllint` (libxml2) when it is on `PATH`, else to
+Python `xmlschema` (the team's documented method; `$ATLANTIS_PYTHON` picks the
+interpreter); with neither, schema checks report `skipped` with an install
+hint.
 
 ## Development
 

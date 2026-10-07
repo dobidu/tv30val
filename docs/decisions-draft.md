@@ -91,6 +91,14 @@ findings of the listed families fail the run; `--gate none` is purely
 advisory. Proposal: start CI with `--gate xml,manifest` (stable, schema-backed
 families) and widen as the team trusts the rest.
 
+**Decision 5 — official XSDs.** Following the team decision of 2026-10-07 to
+commit the NBR 25608 complementary files, the validator finds the XSDs in
+`docs/specs/abnt-nbr-25608-2025-complementary-files/` and validates with
+`xmllint` or Python `xmlschema`. Namespaces are now verified against the
+XSDs' `targetNamespace`. First run: the four BALD documents are valid; the
+four PRRD documents fail on empty `recipientThirdParties` (2, 2, 1 and 4
+errors — the same as the backlog item for G008).
+
 **Still open.** The API index (V-APP-006/007, V-MOD-003) moves to v0.3: it
 needs the coordinators' answer on committing `api-index.json` and NBR 25608
 Annexes C/D, which are not among the complementary files.

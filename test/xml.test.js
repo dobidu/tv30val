@@ -63,7 +63,7 @@ test('schema checks skip with the specific missing piece', () => {
   let j = xmlRun();
   assert.match(of(j, 'V-XML-002', 'st3-bald-901')[0].reason, /no schema directory/);
   j = xmlRun(['--schemas', path.join(FAKE, 'schemas')]);
-  assert.match(of(j, 'V-XML-002', 'st3-bald-901')[0].reason, /xmllint not on PATH/);
+  assert.match(of(j, 'V-XML-002', 'st3-bald-901')[0].reason, /no XSD validator/);
   j = xmlRun(['--schemas', path.join(FAKE, 'schemas')], { PATH: FAKE_BIN });
   assert.match(of(j, 'V-XML-002', 'st3-prrd-901')[0].reason, /XSD PRRD-1\.0-202511\.xsd not in/);
   assert.match(of(j, 'V-XML-004', 'st3-esg-service-901')[0].reason, /XSD file name for ESG not recorded/);

@@ -1,0 +1,14 @@
+#!/bin/sh
+# Fake Python for tests: answers the xmlschema probe and prints canned
+# validation errors in tv30val's tab-separated format. No real validation.
+case "$*" in
+  *"import xmlschema; print"*) echo "9.9.9-fake"; exit 0 ;;
+esac
+xsd="$4"; file="$5"
+case "$file" in
+  *st3-bald-901.xml)
+    printf '\t/bald:BALD/bald:EntryPackage\tXMLSchemaChildrenValidationError\tThe content of element '"'"'bald:EntryPackage'"'"' is not complete. Tag '"'"'bald:x'"'"' expected.\n'
+    printf '\t/bald:BALD/bald:EntryPackage/@appType\tXMLSchemaValidationError\tvalue must be one of [A, B]\n'
+    exit 3 ;;
+esac
+exit 0
