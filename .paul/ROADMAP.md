@@ -21,16 +21,18 @@ Normative validator for AtlantisPB artifacts. v0.1 shipped core CLI + xml, manif
 
 **v0.2 Media, modules, applications, gating** (v0.2.0)
 Status: 🚧 In Progress
-Phases: 0 of 4 complete
+Phases: 1 of 4 complete
 
 | Phase | Name | Plans | Status | Completed |
 |-------|------|-------|--------|-----------|
-| 5 | Media family (V-MED-001..004, new) | 1/2 | In progress | - |
+| 5 | Media family (V-MED-001..004, new) | 2/2 | ✅ Complete | 2026-10-07 |
 | 6 | Module family (V-MOD-001..002; 003 needs API index) | TBD | Not started | - |
 | 7 | API index + app family (V-APP-001..011) | TBD | Blocked (api-index.json decision) | - |
 | 8 | Gating on blocking + v0.2 wrap-up | TBD | Not started | - |
 
-### Phase 5: Media family
+### Phase 5: Media family ✅
+05-01 V-MED-001..003 (catalogued IDs, content vs extension, kind vs folder); 05-02 V-MED-004 (HSTREAM manifests vs catalogue description). Real repo has no media yet → skipped.
+
 **Goal:** validate media assets in applications (`assets/{audios,fonts,hstreams,images,texts,videos}/`): catalogued media IDs (V-MED-001), real format matches extension via magic bytes, no deps (V-MED-002), format allowed for the media type (V-MED-003, clause to confirm → skipped until known), properties vs case requirements via optional `ffprobe` (V-MED-004). Stream-carried media (HSTREAM/MMEDIA/MHAUDIO in PCAPs) stays with `pcap`.
 **Depends on:** v0.1 (catalogue, adapter). **Research:** Likely (NBR 25608 media format clauses; group-document media requirements).
 

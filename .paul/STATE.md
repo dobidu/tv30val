@@ -11,29 +11,31 @@ about: "tv30val"
 See: .paul/PROJECT.md (updated 2026-10-07)
 
 **Core value:** Normative conformance findings with a citable source on every check — missing sources = SKIP, never PASS.
-**Current focus:** v0.2 — Phase 5 (Media family)
+**Current focus:** v0.2 — Phase 6 (Module family)
 
 ## Current Position
 
 Milestone: v0.2 Media, modules, applications, gating
-Phase: 5 of 8 (Media family) — Applying
-Plan: 05-02 executed (3/3 PASS)
-Status: APPLY complete, ready for UNIFY
-Last activity: 2026-10-07 — Executed 05-02; 67 tests; V-MED-004 live
+Phase: 6 of 8 (Module family)
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-10-07 — Phase 5 complete (05-01, 05-02 unified), transitioned to Phase 6
 
 Progress:
-- v0.2: [█░░░░░░░░░] 12%
+- v0.2: [██▌░░░░░░░] 25%
+- Phase 6: [░░░░░░░░░░] 0%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [Applied, ready for UNIFY]
+  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- HSTREAM requirements read from catalogue description at runtime; unprovable → skipped (Phase 5)
 - Media item = asset-folder entry (file or stream dir); allowlist to confirm; unknown format = note (Phase 5)
 - 2026-10-07: v0.2 adds a `media` family (beyond handoff); media first since unblocked
 - 2026-10-07: Integration = keep standalone; team gets docs/integration.md + docs/decisions-draft.md; no writes to AtlantisPB (Phase 4)
@@ -58,20 +60,21 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - Phase 7 blocked on: api-index.json commit permission (coordinators) + standard PDF
 - Media format allowlist not in repo docs → V-MED-003 allowlist "(to confirm)", unknown formats = note
 - No media assets in AtlantisPB yet → media family skips on real repo (future-proofing)
+- Deferred: segment decoding via ffprobe; remote HSTREAM manifests
 - Handoff DoD rows (tools/atlantis README, decisions.md, check:normative script) remain with the team — drafts in docs/
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
-Last commit: v0.1.0 tag
+Last commit: feat(05-media) phase commit
 Branch: main
 Feature branches merged: none
 
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 05-02 applied
-Next action: /paul:unify .paul/phases/05-media/05-02-PLAN.md
-Resume file: .paul/phases/05-media/05-02-PLAN.md
+Stopped at: Phase 5 complete, ready to plan Phase 6
+Next action: /paul:plan for Phase 6 (Module family)
+Resume file: .paul/ROADMAP.md
 
 ---
 *STATE.md — Updated after every significant action*

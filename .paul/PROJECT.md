@@ -22,7 +22,7 @@ Normative conformance findings with a citable source on every check — and miss
 |-----------|-------|
 | Type | Application (CLI tool) |
 | Version | 0.1.0 |
-| Status | v0.1.0 released (standalone, advisory) |
+| Status | v0.1.0 released; v0.2 in progress (Phase 5 of 5-8 done) |
 | Last Updated | 2026-10-07 |
 
 ## Requirements
@@ -42,12 +42,13 @@ Normative conformance findings with a citable source on every check — and miss
 - ✓ Skip-never-pass; `pcap` family stub — Phase 1
 - ✓ XML family complete, V-XML-001..012 — Phase 2
 - ✓ Coherence family complete, V-COH-001..006 — Phase 4
+- ✓ Media family complete, V-MED-001..004 — Phase 5
 - ✓ Decisions draft + integration guide for the team — Phase 4
 - ✓ Manifest family complete, V-MAN-001..006 + JSON Schema subset — Phase 3
 - ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
 
 ### Active (In Progress)
-- [ ] Media family: V-MED-001..003 done (05-01), V-MED-004 next (05-02)
+- [ ] Module family (Phase 6)
 
 ### Planned (Next)
 - v0.2 (milestone created): media family (Phase 5), module family (6), API index + app family (7, blocked), gating + wrap-up (8)
@@ -88,6 +89,7 @@ Normative conformance findings with a citable source on every check — and miss
 | V-XML-010: unknown st3- app = blocking, non-kebab name = note | Never pass silently, never guess | 2026-10-07 | Active |
 | Manifest card refs accept filler ranges; case omissions group-scoped | Matches schema doc and Annex B per-group manifests | 2026-10-07 | Active |
 | Add `media` family in v0.2 (not in handoff) | Media assets are artifacts too; form already covered by check-structure.js, content needs normative checks | 2026-10-07 | Active |
+| HSTREAM requirements from catalogue descriptions at runtime | No private text committed; unprovable → skipped | 2026-10-07 | Active |
 | Integration: keep standalone; team gets docs | Proposal not yet approved; no writes to team repo | 2026-10-07 | Active |
 | Family modules with stub fallback | Each phase adds one file; skip until implemented | 2026-10-07 | Active |
 
@@ -116,4 +118,4 @@ Normative conformance findings with a citable source on every check — and miss
 - Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 5 plan 01*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 5*
