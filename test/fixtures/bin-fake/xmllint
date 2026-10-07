@@ -1,0 +1,20 @@
+#!/bin/sh
+# Fake xmllint for tests: canned output, no real validation.
+case "$1" in
+  --version) echo "xmllint: using libxml version 29999-fake" >&2; exit 0 ;;
+esac
+if [ "$2" = "--schema" ]; then
+  f="$4"
+  case "$f" in
+    *st3-bald-901.xml)
+      echo "$f:6: element EntryPackage: Schemas validity error : Element 'EntryPackage', attribute 'appType': [facet 'enumeration'] The value 'X' is not an element of the set {'A'}." >&2
+      echo "$f:7: element Foo: Schemas validity error : Element 'Foo': This element is not expected. Expected is ( Bar )." >&2
+      echo "$f:5: element BALD: Schemas validity error : Element 'BALD': No matching global declaration available." >&2
+      echo "$f fails to validate" >&2; exit 3 ;;
+    *) echo "$f validates" >&2; exit 0 ;;
+  esac
+fi
+case "$2" in
+  *st3-bald-903.xml) echo "$2:4: parser error : Opening and ending tag mismatch: EntryPackage line 3 and BALD" >&2; exit 1 ;;
+esac
+exit 0

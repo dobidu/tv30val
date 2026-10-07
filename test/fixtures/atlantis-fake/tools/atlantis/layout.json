@@ -1,0 +1,1 @@
+{ "preset": "manual", "presets": { "manual": { "xml": "xmls/{xmlType}/{kebabId}.xml" } } }

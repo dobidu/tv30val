@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ST3_BALD_901 (BALD) — synthetic fixture
+-->
+<bald:BALD xmlns:bald="tag:sbtvd.org.br,2025:XMLSchemas/TV30/AppSignaling/BALD/1.0/">
+  <bald:EntryPackage appContextId="urn:example:901"/>
+</bald:BALD>

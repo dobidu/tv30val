@@ -21,7 +21,7 @@ status = "not_started"
 plans_completed = 0
 
 [loop]
-position = "PLAN"
+position = "APPLY"
 plan = "02-01"
 plan_path = "phases/02-xml/02-01-PLAN.md"
 
