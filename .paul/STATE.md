@@ -11,31 +11,32 @@ about: "tv30val"
 See: .paul/PROJECT.md (updated 2026-10-07)
 
 **Core value:** Normative conformance findings with a citable source on every check — missing sources = SKIP, never PASS.
-**Current focus:** v0.1 — Phase 2 (XML family)
+**Current focus:** v0.1 — Phase 3 (Manifest family)
 
 ## Current Position
 
 Milestone: v0.1 Initial Release
-Phase: 2 of 4 (XML family) — Applying
-Plan: 02-02 executed (3/3 PASS)
-Status: APPLY complete, ready for UNIFY
-Last activity: 2026-10-07 — Executed 02-02; 31 tests; real repo: 0 findings, 56 pass, 25 skipped
+Phase: 3 of 4 (Manifest family)
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-10-07 — Phase 2 complete (02-01, 02-02 unified), transitioned to Phase 3
 
 Progress:
-- Milestone: [██▌░░░░░░░] 25%
-- Phase 2: [█████░░░░░] 50%
+- Milestone: [█████░░░░░] 50%
+- Phase 3: [░░░░░░░░░░] 0%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [Applied, ready for UNIFY]
+  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
 ```
 
 ## Accumulated Context
 
 ### Decisions
 - Standalone repo github.com/dobidu/tv30val; targets AtlantisPB checkout via --root (default cwd)
+- V-XML-010: st3- name missing from catalogue = blocking; non-kebab = note (Phase 2)
 - Emit pass results only when check ran with source available (Phase 2)
 - Consume AtlantisPB catalog.js/layout.js/ids.js via require from --root (Phase 2)
 - Family = lib/families/<name>.js; absent module → stub skips (Phase 1)
@@ -45,23 +46,25 @@ PLAN ──▶ APPLY ──▶ UNIFY
 ### Deferred Issues
 - api-index.json commit permission (coordinators) — blocks v0.2 app family
 - XSD availability — affects V-XML-002..005
+- Namespaces for BAMT/ESG/AEAT unknown (V-XML-003 skips)
+- V-XML-009 deliberate windows rely on header wording (Phase 2)
 - Real layout.json shape for test fixture (Phase 1)
 
 ### Blockers/Concerns
-- Phase 2+: need AtlantisPB checkout for real runs
+- Phase 3: check which JSON Schema keywords Annex B schemas use before planning subset validator
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
-Last commit: see `git log` (phase 1 feat commit)
+Last commit: feat(02-xml) phase commit
 Branch: main
 Feature branches merged: none
 
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 02-02 applied
-Next action: /paul:unify .paul/phases/02-xml/02-02-PLAN.md
-Resume file: .paul/phases/02-xml/02-02-PLAN.md
+Stopped at: Phase 2 complete, ready to plan Phase 3
+Next action: /paul:plan for Phase 3 (Manifest family)
+Resume file: .paul/ROADMAP.md
 
 ---
 *STATE.md — Updated after every significant action*
