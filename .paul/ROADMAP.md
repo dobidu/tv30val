@@ -21,14 +21,15 @@ Normative validator for AtlantisPB artifacts. v0.1 shipped core CLI + xml, manif
 
 **v0.2 Media, modules, applications, gating** (v0.2.0)
 Status: 🚧 In Progress
-Phases: 2 of 4 complete
+Phases: 2 of 5 complete
 
 | Phase | Name | Plans | Status | Completed |
 |-------|------|-------|--------|-----------|
 | 5 | Media family (V-MED-001..004, new) | 2/2 | ✅ Complete | 2026-10-07 |
 | 6 | Module family (V-MOD-001..002; 003 needs API index) | 1/1 | ✅ Complete | 2026-10-07 |
-| 7 | API index + app family (V-APP-001..011) | TBD | Blocked (api-index.json decision) | - |
+| 7 | App family without API index (V-APP-001..005, 008..011) | 0/2 | Planning | - |
 | 8 | Gating on blocking + v0.2 wrap-up | TBD | Not started | - |
+| 9 | API index + V-APP-006/007 + V-MOD-003 | TBD | Blocked (api-index.json decision + NBR 25608 Annexes C/D) | - |
 
 ### Phase 5: Media family ✅
 05-01 V-MED-001..003 (catalogued IDs, content vs extension, kind vs folder); 05-02 V-MED-004 (HSTREAM manifests vs catalogue description). Real repo has no media yet → skipped.
@@ -42,13 +43,17 @@ V-MOD-001..002 against the Manual v1.0 §6.5.5 list; real repo: 1 recorded-devia
 **Goal:** V-MOD-001 module folders vs Manual §6.5.5 list (+ declared additions), V-MOD-002 no app-specific logic / hard-coded case data in modules. V-MOD-003 skipped until the API index exists.
 **Depends on:** v0.1. **Research:** Unlikely.
 
-### Phase 7: API index + app family
-**Goal:** `api-index.json` from Annexes C/D (generated once, reviewed as PR), V-APP-001..011 incl. API allowlist (V-APP-006) and API group vs case (V-APP-007); enables V-MOD-003.
-**Depends on:** coordinators' answer on committing api-index.json; access to the standard PDF. **Research:** Likely.
+### Phase 7: App family without the API index
+**Goal:** V-APP-001..005 (07-01: folder/ID, entry point vs signalling, package hygiene, README cases, README input artifacts) and V-APP-008..011 (07-02: configuration placement, common-module use, result keys, placeholders). Split from the original Phase 7 on 2026-10-07 so unblocked checks ship.
+**Depends on:** v0.1 adapter. **Research:** done (Manual §6.5.4–6.5.7 read from the PDF).
+
+### Phase 9: API index (blocked)
+**Goal:** `api-index.json` from NBR 25608 Annexes C/D (generated once, reviewed as PR); V-APP-006 (API allowlist), V-APP-007 (API group vs case), V-MOD-003 (tv30-webservices surface).
+**Depends on:** coordinators' answer on committing api-index.json; access to the standard. May move to v0.3.
 
 ### Phase 8: Gating + wrap-up
 **Goal:** opt-in gate mode (exit 1 on blocking only for chosen families), updated decisions draft and integration guide, v0.2.0 release.
-**Depends on:** Phases 5-7 (7 may be deferred if still blocked).
+**Depends on:** Phases 5-7 (Phase 9 may follow or move to v0.3).
 
 ## v0.1 Phases (✅ shipped)
 

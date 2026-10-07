@@ -9,7 +9,7 @@ about: "tv30val"
 | Version | Name | Phases | Status | Completed |
 |---------|------|--------|--------|-----------|
 | v0.1 | Initial Release | 1-4 | ✅ Shipped (tag v0.1.0) | 2026-10-07 |
-| v0.2 | Media, modules, applications, gating | 5-8 | 🚧 In Progress | - |
+| v0.2 | Media, modules, applications, gating | 5-9 | 🚧 In Progress | - |
 
 ## v0.1 Initial Release ✅
 Core CLI, xml (V-XML-001..012), manifest (V-MAN-001..006), coherence (V-COH-001..006). 24 of 39 checks live; standalone, advisory. Release: https://github.com/dobidu/tv30val/releases/tag/v0.1.0

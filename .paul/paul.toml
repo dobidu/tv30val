@@ -12,22 +12,24 @@ source = "https://chrisai.cv/skool"
 name = "v0.2 Media, modules, applications, gating"
 version = "0.2.0"
 status = "in_progress"
-phases = 4
+phases = 5
 
 [phase]
 number = 7
-name = "API index + app family"
-status = "blocked"
+name = "App family without API index"
+status = "in_progress"
 plans_completed = 0
 
 [loop]
-position = "IDLE"
+position = "PLAN"
+plan = "07-01"
+plan_path = "phases/07-app/07-01-PLAN.md"
 
 [satellite]
 groom = true
 
 [stats]
 total_plans = 9
-total_phases = 8
+total_phases = 9
 completed_phases = 6
 last_activity = "2026-10-07T00:00:00Z"
