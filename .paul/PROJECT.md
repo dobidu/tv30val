@@ -44,12 +44,14 @@ Normative conformance findings with a citable source on every check — and miss
 - ✓ Coherence family complete, V-COH-001..006 — Phase 4
 - ✓ Media family complete, V-MED-001..004 — Phase 5
 - ✓ Module family V-MOD-001..002 — Phase 6
+- ✓ App family V-APP-001..005 — Phase 7 (07-01)
 - ✓ Decisions draft + integration guide for the team — Phase 4
 - ✓ Manifest family complete, V-MAN-001..006 + JSON Schema subset — Phase 3
 - ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
 
 ### Active (In Progress)
-- [ ] API index + app family (Phase 7) — blocked on external input
+- [ ] App family: V-APP-001..005 done (07-01); 008..011 next (07-02)
+- [ ] API index (Phase 9) — blocked on external input
 
 ### Planned (Next)
 - v0.2 (milestone created): media family (Phase 5), module family (6), API index + app family (7, blocked), gating + wrap-up (8)
@@ -119,4 +121,4 @@ Normative conformance findings with a citable source on every check — and miss
 - Are XSDs obtainable? If not, V-XML-002..005 permanently skipped.
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 6*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 7 plan 01*

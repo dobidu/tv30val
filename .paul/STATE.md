@@ -16,24 +16,25 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.2 Media, modules, applications, gating
-Phase: 7 of 9 (App family without API index) — Applying
-Plan: 07-01 executed (2/2 PASS); 07-02 next
-Status: APPLY complete, ready for UNIFY
-Last activity: 2026-10-07 — Executed 07-01; 81 tests; real: app 0 findings, 75 pass
+Phase: 7 of 9 (App family without API index) — In progress
+Plan: 07-01 complete; 07-02 (V-APP-008..011) not yet planned
+Status: Ready to plan 07-02
+Last activity: 2026-10-07 — 07-01 unified
 
 Progress:
-- v0.2: [█████░░░░░] 50%
+- v0.2: [█████▌░░░░] 55%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [Applied, ready for UNIFY]
+  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- V-APP-003 counts loaded references only; README tables by column name (Phase 7)
 - 2026-10-07: Phase 7 split — index-free app checks now; API index → Phase 9 (blocked)
 - V-APP-011 language: Manual sets no rule → skipped; placeholders = team-convention note
 - Module list from Manual v1.0 PDF §6.5.5; declarations matched per decisions.md paragraph (Phase 6)
@@ -74,9 +75,9 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 07-01 applied
-Next action: /paul:unify .paul/phases/07-app/07-01-PLAN.md
-Resume file: .paul/phases/07-app/07-01-PLAN.md
+Stopped at: Plan 07-01 unified
+Next action: /paul:plan 07-02 (V-APP-008..011)
+Resume file: .paul/phases/07-app/07-01-SUMMARY.md
 
 ---
 *STATE.md — Updated after every significant action*

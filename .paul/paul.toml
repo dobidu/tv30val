@@ -18,18 +18,16 @@ phases = 5
 number = 7
 name = "App family without API index"
 status = "in_progress"
-plans_completed = 0
+plans_completed = 1
 
 [loop]
-position = "APPLY"
-plan = "07-01"
-plan_path = "phases/07-app/07-01-PLAN.md"
+position = "IDLE"
 
 [satellite]
 groom = true
 
 [stats]
-total_plans = 9
+total_plans = 10
 total_phases = 9
 completed_phases = 6
 last_activity = "2026-10-07T00:00:00Z"
