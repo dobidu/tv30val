@@ -26,7 +26,7 @@ Phases: 1 of 3 complete (Phase 9 blocked)
 
 | Phase | Name | Plans | Status | Completed |
 |-------|------|-------|--------|-----------|
-| 9 | API index + V-APP-006/007 + V-MOD-003 | TBD | Blocked (coordinators + NBR 25608 Annexes C/D) | - |
+| 9 | API index + V-APP-006/007 + V-MOD-003 | 1/2 | In progress (index built locally; commit = coordinators) | - |
 | 10 | NCL main.ncl vs NCL4.0 profile (JSON deferred) | 1/1 | ✅ Complete | 2026-10-07 |
 | 11 | v0.3 wrap-up and release | TBD | Not started | - |
 
@@ -66,7 +66,7 @@ Real repo: 5 V-APP-008 notes (inline emulator WebServices URL); everything else 
 **Goal:** V-APP-001..005 (07-01: folder/ID, entry point vs signalling, package hygiene, README cases, README input artifacts) and V-APP-008..011 (07-02: configuration placement, common-module use, result keys, placeholders). Split from the original Phase 7 on 2026-10-07 so unblocked checks ship.
 **Depends on:** v0.1 adapter. **Research:** done (Manual §6.5.4–6.5.7 read from the PDF).
 
-### Phase 9: API index (moved to v0.3 — blocked)
+### Phase 9: API index (unblocked 2026-10-07: standard provided)
 **Goal:** `api-index.json` from NBR 25608 Annexes C/D (generated once, reviewed as PR); V-APP-006 (API allowlist), V-APP-007 (API group vs case), V-MOD-003 (tv30-webservices surface).
 **Depends on:** coordinators' answer on committing api-index.json; access to the standard. May move to v0.3.
 

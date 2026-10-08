@@ -11,18 +11,18 @@ about: "tv30val"
 See: .paul/PROJECT.md (updated 2026-10-07)
 
 **Core value:** Normative conformance findings with a citable source on every check — missing sources = SKIP, never PASS.
-**Current focus:** v0.3 — Phase 11 (wrap-up + v0.3.0); Phase 9 blocked
+**Current focus:** v0.3 — Phase 9 (API index): index built; next 09-02 checks
 
 ## Current Position
 
 Milestone: v0.3 API index, NCL/JSON schemas
-Phase: 11 of 11 (v0.3 wrap-up) — Phase 9 blocked
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-10-07 — Phase 10 complete (10-01 unified)
+Phase: 9 of 11 (API index) — In progress
+Plan: 09-01 complete (generator + local index); 09-02 (V-APP-006/007, V-MOD-003) next
+Status: Ready to plan 09-02
+Last activity: 2026-10-07 — Standard provided; API index built (66 tv3ws / 27 nclua ids)
 
 Progress:
-- v0.3: [█████░░░░░] 50%
+- v0.3: [██████░░░░] 60%
 
 ## Loop Position
 
@@ -34,6 +34,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 ## Accumulated Context
 
 ### Decisions
+- 2026-10-07: NBR 25608 PDF provided (licensed copy, watermark) — text only in scratchpad; index in gitignored reference/
 - NCL validated via mapped imports (uri_mapper / catalog); NCL 3.0 ns = one finding (Phase 10)
 - 2026-10-07: Phase 10 = NCL only; JSON schemas deferred (no reports in repo; need oneOf/unevaluatedProperties/cross-file refs)
 - Official XSDs from AtlantisPB complementary files; xmlschema backend; V-XML-002 passes only clean (Phase 8)
@@ -67,7 +68,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - Official nga preset/switchgroup schemas misspell `minimum` as `minmum` — tell the team
 - JSON Schema subset; unsupported keyword → skip (Phase 3)
 - Card ranges F01-F42 expanded; V-MAN-002 omissions group-scoped (Phase 3)
-- Phase 9 blocked on: api-index.json commit permission (coordinators) + NBR 25608 PDF (Annexes C/D) — not in AtlantisPB, not available here
+- api-index.json commit permission still the coordinators' call (index lives in gitignored reference/)
 - Media format allowlist not in repo docs → V-MED-003 allowlist "(to confirm)", unknown formats = note
 - No media assets in AtlantisPB yet → media family skips on real repo (future-proofing)
 - Deferred: segment decoding via ffprobe; remote HSTREAM manifests
@@ -82,9 +83,9 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Phase 10 complete
-Next action: /paul:plan for Phase 11 (v0.3 wrap-up + release), or wait for Phase 9 inputs
-Resume file: .paul/ROADMAP.md
+Stopped at: API index built (09-01)
+Next action: /paul:plan 09-02 (V-APP-006/007, V-MOD-003 consuming the index); also pending: NBR verification fixes (44642 exemption, PRRD conflict evidence, clause marks)
+Resume file: .paul/phases/09-api-index/09-01-SUMMARY.md
 
 ---
 *STATE.md — Updated after every significant action*

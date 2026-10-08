@@ -1,0 +1,74 @@
+Contents
+C.6.1.1 Example group ............................................................ 10
+Table C.2 — List of API ids (continues)
+id
+Section
+Current version
+tv3ws-example-thing
+C.6.1.1
+2.0
+tv3ws-example-gone
+0
+2.0
+Exemplar para uso exclusivo - SYNTHETIC FIXTURE
+Impresso por: nobody
+ABNT NBR 25608:2025
+211
+© ABNT 2025 ─ All rights reserved
+Table C.2 (conclusion)
+id
+Section
+Current version
+tv3ws-example-variants
+C.6.1.3
+2.0
+C.6.1.1
+Invented API for testing
+Table C.9 — Specification of the API for an invented thing
+Request format:
+http(s)://<host>/tv3/example/<thing-
+id>[?verbose=<bool>]
+Type of operation:
+GET
+Description:
+Invented.
+C.6.1.2
+API for removing an invented thing
+Request format:
+http(s)://<host>/tv3/example/<thing-id>
+Operation Type:
+DELETE
+C.6.1.3
+invented variants
+Request format:
+(1) Local: http(s)://<host>/tv3/variant/a?x=1
+(2) Remote: http://<host>/tv3/variant/b
+Type of operation:
+POST
+Table D.1 — API ids
+id
+Current Version
+Section / Description
+lua-version
+5.1
+Returns an invented version.
+nclua-thing
+4.0
+D.4
+nclua-event-thing
+4.0
+D.5.3
+D.4
+Thing
+thing:draw (mode: string; x, y: number)
+Arguments
+thing.new (w: number)
+D.4.1
+Sub-clause of thing
+thing:erase ()
+D.5.3
+thing event class
+evt = { class='thing', type='press' }
+D.6
+Next clause
+other:fn (a: number)

@@ -15,10 +15,10 @@ status = "in_progress"
 phases = 3
 
 [phase]
-number = 11
-name = "v0.3 wrap-up"
-status = "not_started"
-plans_completed = 0
+number = 9
+name = "API index"
+status = "in_progress"
+plans_completed = 1
 
 [loop]
 position = "IDLE"
@@ -27,7 +27,7 @@ position = "IDLE"
 groom = true
 
 [stats]
-total_plans = 14
+total_plans = 15
 total_phases = 11
 completed_phases = 9
 last_activity = "2026-10-07T00:00:00Z"
