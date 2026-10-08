@@ -96,6 +96,6 @@ test('V-APP-011: placeholders in tester-facing text, not in comments', () => {
 
 test('no application folders → all skipped', () => {
   const e = run(fs.mkdtempSync(path.join(os.tmpdir(), 'tv30val-')));
-  assert.equal(e.results.length, 11);
+  assert.equal(e.results.length, 12);
   assert.ok(e.results.every((r) => r.status === 'skipped'));
 });

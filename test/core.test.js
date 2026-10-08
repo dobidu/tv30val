@@ -27,7 +27,7 @@ function emptyDir() {
 
 test('catalogue validates and every check has a source', () => {
   assert.equal(validateCatalogue(), true);
-  assert.equal(CHECKS.length, 43);
+  assert.equal(CHECKS.length, 44);
   for (const ch of CHECKS) assert.ok(ch.source && ch.source.trim(), `${ch.id} has no source`);
 });
 
@@ -63,7 +63,7 @@ test('--json results always carry a source; skips carry a reason', () => {
   assert.equal(r.code, 0);
   const j = JSON.parse(r.out);
   for (const k of ['tool', 'version', 'root', 'sources', 'results', 'summary']) assert.ok(k in j, `missing ${k}`);
-  assert.equal(j.results.length, 43);
+  assert.equal(j.results.length, 44);
   for (const x of j.results) {
     assert.ok(x.source, `${x.check} without source`);
     if (x.status === 'skipped') assert.ok(x.reason, `${x.check} skipped without reason`);
@@ -74,7 +74,7 @@ test('--json results always carry a source; skips carry a reason', () => {
 test('text output always shows skips and warns when everything skipped', () => {
   const r = cli(['--root', emptyDir(), '--severity', 'blocking']);
   assert.equal(r.code, 0);
-  assert.match(r.out, /Skipped \(43\):/);
+  assert.match(r.out, /Skipped \(44\):/);
   assert.match(r.out, /WARNING: all checks skipped/);
 });
 

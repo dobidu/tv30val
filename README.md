@@ -120,7 +120,7 @@ rather than verified against the standard itself.
 | `manifest` | BTDS Annex B manifests and `cards.json` | V-MAN-001..006 | v0.1 ✓ |
 | `coherence` | Cross-artifact consistency with the catalogue | V-COH-001..006 | v0.1 ✓ |
 | `media` | Media assets in `assets/` (catalogued IDs, content vs extension, kind vs folder, stream content) | V-MED-001..004 | v0.2 ✓ |
-| `app` | Test applications, API usage vs. Annexes C/D | V-APP-001..011 | v0.2 (001..005, 008..011 ✓; 006/007 need API index) |
+| `app` | Test applications, API usage vs. Annexes C/D | V-APP-001..012 | v0.2/v0.3 (001..005, 008..012 ✓; 006/007 need API index) |
 | `module` | Common modules vs Manual §6.5.5 | V-MOD-001..003 | v0.2 (001..002 ✓; 003 needs API index) |
 | `pcap` | PCAP/TS streams | — (always `skipped`) | deferred |
 
@@ -156,6 +156,10 @@ XSD validation shells out to `xmllint` (libxml2) when it is on `PATH`, else to
 Python `xmlschema` (the team's documented method; `$ATLANTIS_PYTHON` picks the
 interpreter); with neither, schema checks report `skipped` with an install
 hint.
+
+Ginga-NCL `main.ncl` (V-APP-012) is validated against the NCL 4.0 profile
+of the same complementary files, with its `http://www.ncl.org.br/NCL4.0/…`
+imports mapped to the local folder — never fetched.
 
 ## Development
 

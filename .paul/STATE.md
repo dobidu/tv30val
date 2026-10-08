@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.3 API index, NCL/JSON schemas
-Phase: 10 of 11 (NCL and JSON schemas) — Planning
-Plan: 10-01 created, awaiting approval
-Status: PLAN created, ready for APPLY
-Last activity: 2026-10-07 — Created .paul/phases/10-ncl-json-schemas/10-01-PLAN.md
+Phase: 10 of 11 (NCL and JSON schemas) — Applying
+Plan: 10-01 executed (2/2 PASS)
+Status: APPLY complete, ready for UNIFY
+Last activity: 2026-10-07 — Executed 10-01; 97 tests; NCL mapping verified against the real profile
 
 Progress:
 - v0.3: [░░░░░░░░░░] 0%
@@ -28,7 +28,7 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ○        ○     [Plan created, awaiting approval]
+  ✓        ✓        ○     [Applied, ready for UNIFY]
 ```
 
 ## Accumulated Context
@@ -81,8 +81,8 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 10-01 created
-Next action: Approve, then /paul:apply .paul/phases/10-ncl-json-schemas/10-01-PLAN.md
+Stopped at: Plan 10-01 applied
+Next action: /paul:unify .paul/phases/10-ncl-json-schemas/10-01-PLAN.md
 Resume file: .paul/phases/10-ncl-json-schemas/10-01-PLAN.md
 
 ---

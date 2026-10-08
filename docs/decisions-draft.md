@@ -102,3 +102,29 @@ errors — the same as the backlog item for G008).
 **Still open.** The API index (V-APP-006/007, V-MOD-003) moves to v0.3: it
 needs the coordinators' answer on committing `api-index.json` and NBR 25608
 Annexes C/D, which are not among the complementary files.
+
+---
+
+## 2026-10-07 — Normative artifact validator (v0.3, in progress): NCL, JSON schemas
+
+**Decision 1 — Ginga-NCL validated against the NCL 4.0 profile (V-APP-012).**
+`main.ncl` must use the NCL 4.0 profile namespace
+(`http://www.ncl.org.br/NCL4.0/NCL4Profile`) and validate against
+`NCL4.0/profiles/NCL40.xsd`. The profile's imports from
+`http://www.ncl.org.br/NCL4.0/…` are mapped to the local complementary files
+(xmlschema `uri_mapper`, as in `normative-schemas.md`; an XML catalog for
+xmllint), so validation never goes online. A document still carrying the NCL
+3.0 EDTV namespace written by the scaffold is reported as one blocking
+finding pointing at that known difference.
+
+**Decision 2 — JSON schemas deferred.** The AMM, nga and NCL `userProfile`
+JSON Schemas use `oneOf`, `unevaluatedProperties`, `patternProperties`,
+`multipleOf` and cross-file `$ref` (including `urn:nga:…` ids), beyond the
+built-in subset, and no saved report exists in the repository to validate.
+When the first reports are committed, add a Python `jsonschema` backend (the
+dependency the backlog item already names).
+
+**For the forum — typo in the official nga schemas.** `nga/get` and
+`nga/post`, files `preset.schema.json` and `switchgroup.schema.json`, write
+`minmum` instead of `minimum`. JSON Schema ignores unknown keywords, so those
+lower bounds are never enforced by any validator. Worth reporting upstream.

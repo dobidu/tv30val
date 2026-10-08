@@ -20,7 +20,7 @@ Optional sources:
 | Source | How | Without it |
 |---|---|---|
 | XSDs | found automatically in AtlantisPB's committed `docs/specs/abnt-nbr-25608-2025-complementary-files/` (per-type subfolders); override with `--schemas <dir>`, `$ATLANTIS_SCHEMAS` or `reference/schemas/` | V-XML-002, 004, 005 skipped |
-| XSD validator | `xmllint` (`apt install libxml2-utils`), else Python `xmlschema` (`pip install xmlschema`; set `$ATLANTIS_PYTHON` to pick the interpreter) — the team's documented method | V-XML-002, 004, 005 skipped; V-XML-001 uses the built-in reader |
+| XSD validator | `xmllint` (`apt install libxml2-utils`), else Python `xmlschema` (`pip install xmlschema`; set `$ATLANTIS_PYTHON` to pick the interpreter) — the team's documented method | V-XML-002, 004, 005 and V-APP-012 (NCL) skipped; V-XML-001 uses the built-in reader |
 
 Useful variants:
 
