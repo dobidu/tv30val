@@ -55,7 +55,7 @@ Normative conformance findings with a citable source on every check — and miss
 None.
 
 ### Planned (Next)
-- v0.3: API index + V-APP-006/007 + V-MOD-003 (Phase 9, blocked); NCL main.ncl vs NCL4.0 profile and AMM/nga JSON schemas (Phase 10)
+- v0.3 (milestone created): API index + V-APP-006/007 + V-MOD-003 (Phase 9, blocked); NCL main.ncl vs NCL4.0 profile and AMM/nga JSON schemas (Phase 10)
 
 ### Out of Scope
 - PCAP/TS stream validation — no massa de teste, owner undefined; `pcap` family reports skipped only
@@ -122,4 +122,4 @@ None.
 - XSDs: resolved — AtlantisPB commits the complementary files (2026-10-07).
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after v0.2 milestone*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after v0.3 milestone creation*

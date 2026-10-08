@@ -9,16 +9,16 @@ version = "1.4"
 source = "https://chrisai.cv/skool"
 
 [milestone]
-name = "v0.2 Media, modules, applications, gating"
-version = "0.2.0"
-status = "complete"
-phases = 4
+name = "v0.3 API index, NCL/JSON schemas"
+version = "0.3.0"
+status = "in_progress"
+phases = 3
 
 [phase]
-number = 8
-name = "Gating + v0.2 wrap-up"
-status = "complete"
-plans_completed = 2
+number = 10
+name = "NCL and JSON schemas"
+status = "not_started"
+plans_completed = 0
 
 [loop]
 position = "IDLE"
@@ -28,6 +28,6 @@ groom = true
 
 [stats]
 total_plans = 13
-total_phases = 9
+total_phases = 11
 completed_phases = 8
 last_activity = "2026-10-07T00:00:00Z"

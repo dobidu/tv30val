@@ -16,13 +16,28 @@ Normative validator for AtlantisPB artifacts. v0.1 shipped core CLI + xml, manif
 |---------|------|--------|--------|-----------|
 | v0.1 | Initial Release | 1-4 | ✅ Shipped | 2026-10-07 |
 | v0.2 | Media, modules, applications, gating | 5-8 | ✅ Shipped (v0.2.0) | 2026-10-07 |
-| v0.3 | API index, NCL/JSON schemas | 9- | 📋 Planned | - |
+| v0.3 | API index, NCL/JSON schemas | 9-11 | 🚧 In Progress | - |
 
 ## Current Milestone
 
-**v0.2 Media, modules, applications, gating** (v0.2.0)
-Status: ✅ Complete (v0.2.0, 2026-10-07)
-Phases: 4 of 4 complete
+**v0.3 API index, NCL/JSON schemas** (v0.3.0)
+Status: 🚧 In Progress
+Phases: 0 of 3 complete (Phase 10 first; Phase 9 blocked)
+
+| Phase | Name | Plans | Status | Completed |
+|-------|------|-------|--------|-----------|
+| 9 | API index + V-APP-006/007 + V-MOD-003 | TBD | Blocked (coordinators + NBR 25608 Annexes C/D) | - |
+| 10 | NCL main.ncl vs NCL4.0 profile; AMM/nga JSON schemas | TBD | Not started | - |
+| 11 | v0.3 wrap-up and release | TBD | Not started | - |
+
+### Phase 10: NCL and JSON schemas
+**Goal:** validate Ginga-NCL `main.ncl` against `NCL4.0/profiles/NCL40.xsd` (with `http://www.ncl.org.br/NCL4.0/…` imports mapped to the local folder; known profile-namespace difference recorded in AtlantisPB's normative-schemas.md), and saved AMM/nga JSON reports against their JSON schemas — completing the "single schema-validation command" AtlantisPB's backlog asks for.
+**Depends on:** v0.2 (schema discovery, validator backends, JSON Schema subset). **Research:** Likely (NCL4.0 import mapping; JSON schema keywords vs the subset).
+
+### Phase 11: v0.3 wrap-up
+**Goal:** docs, real verification, v0.3.0 release. Includes Phase 9 if unblocked by then; otherwise Phase 9 moves on.
+
+## v0.2 Phases (✅ shipped v0.2.0)
 
 | Phase | Name | Plans | Status | Completed |
 |-------|------|-------|--------|-----------|
@@ -83,12 +98,5 @@ V-MAN-001..006 on a dependency-free JSON Schema subset. Real repo: A03/B01/B02 d
 04-01 coherence family V-COH-001..006; 04-02 v0.1.0 wrap-up (decisions draft, integration guide; integration decision: standalone).
 
 ---
-## 📋 Planned Milestone: v0.3 API index, NCL/JSON schemas
-
-| Phase | Focus | Research |
-|-------|-------|----------|
-| 9 | API index + V-APP-006/007 + V-MOD-003 (blocked: coordinators + Annexes C/D) | Likely |
-| 10 | NCL main.ncl against NCL4.0 profile; AMM/nga JSON schemas | Likely |
-
 ---
 *Roadmap created: 2026-10-07 · v0.2 added 2026-10-07 · v0.3 planned 2026-10-07*

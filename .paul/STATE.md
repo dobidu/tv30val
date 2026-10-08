@@ -11,24 +11,24 @@ about: "tv30val"
 See: .paul/PROJECT.md (updated 2026-10-07)
 
 **Core value:** Normative conformance findings with a citable source on every check — missing sources = SKIP, never PASS.
-**Current focus:** v0.2.0 shipped — next: v0.3 (API index blocked; NCL/JSON schemas available)
+**Current focus:** v0.3 — Phase 10 (NCL and JSON schemas)
 
 ## Current Position
 
-Milestone: v0.2 Media, modules, applications, gating — ✅ Complete (v0.2.0)
-Phase: 8 of 8 complete
-Plan: none
-Status: Milestone complete; v0.3 planned (Phase 9 blocked, Phase 10 ready to plan)
-Last activity: 2026-10-07 — Phase 8 complete; v0.2.0 tagged and released
+Milestone: v0.3 API index, NCL/JSON schemas
+Phase: 10 of 11 (NCL and JSON schemas) — Phase 9 blocked
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-10-07 — Milestone v0.3 created (v0.2.0 released)
 
 Progress:
-- v0.2: [██████████] 100%
+- v0.3: [░░░░░░░░░░] 0%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ✓     [Loop complete - milestone done]
+  ○        ○        ○     [Ready for first PLAN]
 ```
 
 ## Accumulated Context
@@ -79,8 +79,8 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: v0.2 milestone complete (v0.2.0 released)
-Next action: share v0.2.0 with team; /paul:milestone for v0.3 when ready (Phase 10 NCL/JSON schemas is unblocked)
+Stopped at: Milestone v0.3 created
+Next action: /paul:plan for Phase 10 (NCL and JSON schemas)
 Resume file: .paul/ROADMAP.md
 
 ---

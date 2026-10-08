@@ -10,7 +10,7 @@ about: "tv30val"
 |---------|------|--------|--------|-----------|
 | v0.1 | Initial Release | 1-4 | ✅ Shipped (tag v0.1.0) | 2026-10-07 |
 | v0.2 | Media, modules, applications, gating | 5-8 | ✅ Shipped (tag v0.2.0) | 2026-10-07 |
-| v0.3 | API index, NCL/JSON schemas | 9- | 📋 Planned | - |
+| v0.3 | API index, NCL/JSON schemas | 9-11 | 🚧 In Progress | - |
 
 ## v0.1 Initial Release ✅
 Core CLI, xml (V-XML-001..012), manifest (V-MAN-001..006), coherence (V-COH-001..006). 24 of 39 checks live; standalone, advisory. Release: https://github.com/dobidu/tv30val/releases/tag/v0.1.0
@@ -20,5 +20,6 @@ Core CLI, xml (V-XML-001..012), manifest (V-MAN-001..006), coherence (V-COH-001.
 **Shipped:** 2026-10-07, https://github.com/dobidu/tv30val/releases/tag/v0.2.0 — media, module, app (index-free) families; --gate; official XSDs. 40 of 43 checks run.
 **Blocker:** app family V-APP-006/007 and module V-MOD-003 need `api-index.json` (coordinators: may it be committed?) and the standard's Annexes C/D to generate it.
 
-## v0.3 API index, NCL/JSON schemas 📋
-Phase 9 (API index, moved from v0.2 on 2026-10-07, blocked); NCL profile and JSON schema validation from the complementary files.
+## v0.3 API index, NCL/JSON schemas 🚧
+**Goal:** finish schema coverage (NCL profile, AMM/nga JSON) and, when unblocked, the API index.
+**Phases:** 9 API index (blocked), 10 NCL/JSON schemas (first), 11 wrap-up + release.
