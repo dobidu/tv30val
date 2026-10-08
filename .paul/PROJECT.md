@@ -47,6 +47,7 @@ Normative conformance findings with a citable source on every check — and miss
 - ✓ App family V-APP-001..005, 008..011 — Phase 7
 - ✓ Opt-in gating (--gate) — Phase 8
 - ✓ Official NBR 25608 XSDs (xmllint or xmlschema) — Phase 8
+- ✓ Ginga-NCL main.ncl vs NCL 4.0 profile (V-APP-012) — Phase 10
 - ✓ Decisions draft + integration guide for the team — Phase 4
 - ✓ Manifest family complete, V-MAN-001..006 + JSON Schema subset — Phase 3
 - ✓ Tests: missing schema → skipped + exit 0; every check has source — Phase 1
@@ -122,4 +123,4 @@ None.
 - XSDs: resolved — AtlantisPB commits the complementary files (2026-10-07).
 
 ---
-*Created: 2026-10-07 · Last updated: 2026-10-07 after v0.3 milestone creation*
+*Created: 2026-10-07 · Last updated: 2026-10-07 after Phase 10*

@@ -11,29 +11,30 @@ about: "tv30val"
 See: .paul/PROJECT.md (updated 2026-10-07)
 
 **Core value:** Normative conformance findings with a citable source on every check — missing sources = SKIP, never PASS.
-**Current focus:** v0.3 — Phase 10 (NCL and JSON schemas)
+**Current focus:** v0.3 — Phase 11 (wrap-up + v0.3.0); Phase 9 blocked
 
 ## Current Position
 
 Milestone: v0.3 API index, NCL/JSON schemas
-Phase: 10 of 11 (NCL and JSON schemas) — Applying
-Plan: 10-01 executed (2/2 PASS)
-Status: APPLY complete, ready for UNIFY
-Last activity: 2026-10-07 — Executed 10-01; 97 tests; NCL mapping verified against the real profile
+Phase: 11 of 11 (v0.3 wrap-up) — Phase 9 blocked
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-10-07 — Phase 10 complete (10-01 unified)
 
 Progress:
-- v0.3: [░░░░░░░░░░] 0%
+- v0.3: [█████░░░░░] 50%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ○     [Applied, ready for UNIFY]
+  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- NCL validated via mapped imports (uri_mapper / catalog); NCL 3.0 ns = one finding (Phase 10)
 - 2026-10-07: Phase 10 = NCL only; JSON schemas deferred (no reports in repo; need oneOf/unevaluatedProperties/cross-file refs)
 - Official XSDs from AtlantisPB complementary files; xmlschema backend; V-XML-002 passes only clean (Phase 8)
 - 2026-10-07: Wire AtlantisPB-committed NBR 25608 XSDs before v0.2.0 (plan 08-02); release moves to 08-02
@@ -74,16 +75,16 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
-Last commit: v0.2.0 tag
+Last commit: feat(10-ncl-json-schemas) phase commit
 Branch: main
 Feature branches merged: none
 
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Plan 10-01 applied
-Next action: /paul:unify .paul/phases/10-ncl-json-schemas/10-01-PLAN.md
-Resume file: .paul/phases/10-ncl-json-schemas/10-01-PLAN.md
+Stopped at: Phase 10 complete
+Next action: /paul:plan for Phase 11 (v0.3 wrap-up + release), or wait for Phase 9 inputs
+Resume file: .paul/ROADMAP.md
 
 ---
 *STATE.md — Updated after every significant action*

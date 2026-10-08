@@ -15,21 +15,19 @@ status = "in_progress"
 phases = 3
 
 [phase]
-number = 10
-name = "NCL and JSON schemas"
+number = 11
+name = "v0.3 wrap-up"
 status = "not_started"
 plans_completed = 0
 
 [loop]
-position = "APPLY"
-plan = "10-01"
-plan_path = "phases/10-ncl-json-schemas/10-01-PLAN.md"
+position = "IDLE"
 
 [satellite]
 groom = true
 
 [stats]
-total_plans = 13
+total_plans = 14
 total_phases = 11
-completed_phases = 8
+completed_phases = 9
 last_activity = "2026-10-07T00:00:00Z"

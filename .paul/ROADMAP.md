@@ -22,15 +22,17 @@ Normative validator for AtlantisPB artifacts. v0.1 shipped core CLI + xml, manif
 
 **v0.3 API index, NCL/JSON schemas** (v0.3.0)
 Status: 🚧 In Progress
-Phases: 0 of 3 complete (Phase 10 first; Phase 9 blocked)
+Phases: 1 of 3 complete (Phase 9 blocked)
 
 | Phase | Name | Plans | Status | Completed |
 |-------|------|-------|--------|-----------|
 | 9 | API index + V-APP-006/007 + V-MOD-003 | TBD | Blocked (coordinators + NBR 25608 Annexes C/D) | - |
-| 10 | NCL main.ncl vs NCL4.0 profile (JSON deferred) | 0/1 | Planning | - |
+| 10 | NCL main.ncl vs NCL4.0 profile (JSON deferred) | 1/1 | ✅ Complete | 2026-10-07 |
 | 11 | v0.3 wrap-up and release | TBD | Not started | - |
 
-### Phase 10: NCL and JSON schemas
+### Phase 10: NCL and JSON schemas ✅
+V-APP-012 with offline import mapping, verified against the real profile. JSON deferred (no reports; keywords beyond subset); nga `minmum` typo documented.
+
 **Goal:** validate Ginga-NCL `main.ncl` against `NCL4.0/profiles/NCL40.xsd` (with `http://www.ncl.org.br/NCL4.0/…` imports mapped to the local folder; known profile-namespace difference recorded in AtlantisPB's normative-schemas.md), and saved AMM/nga JSON reports against their JSON schemas — completing the "single schema-validation command" AtlantisPB's backlog asks for.
 **Depends on:** v0.2 (schema discovery, validator backends). **Research:** done 2026-10-07 — JSON part deferred: no saved reports exist and the schemas need oneOf/unevaluatedProperties/cross-file refs (a jsonschema backend when reports exist). Found a `minmum` typo in the official nga schemas.
 
