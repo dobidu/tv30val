@@ -58,7 +58,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - Quick-and-dirty mode; handoff recommendations = defaults (xmllint, advisory, v0.1 = xml/manifest/coherence)
 
 ### Deferred Issues
-- api-index.json commit permission (coordinators) — blocks v0.2 app family
+- api-index.json commit permission (coordinators) — index lives in gitignored reference/
 - Real PRRD 002..005 schema errors are AtlantisPB backlog work (not a tool issue)
 - Namespaces for ESG/AEAT unknown (V-XML-003 skips)
 - V-XML-009 deliberate windows rely on header wording (Phase 2)
@@ -76,16 +76,21 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - AtlantisPB is PRIVATE, tv30val PUBLIC: fixtures synthetic only, never copy repo content
 
 ### Git State
-Last commit: feat(10-ncl-json-schemas) phase commit
+Last commit: API index generator (09-01)
 Branch: main
 Feature branches merged: none
 
 ## Session Continuity
 
-Last session: 2026-10-07
-Stopped at: API index built (09-01)
-Next action: /paul:plan 09-02 (V-APP-006/007, V-MOD-003 consuming the index); also pending: NBR verification fixes (44642 exemption, PRRD conflict evidence, clause marks)
-Resume file: .paul/phases/09-api-index/09-01-SUMMARY.md
+Last session: 2026-10-08
+Stopped at: Paused after 09-01 (API index generator committed; index built locally)
+Next action: rebuild local env (see handoff), then /paul:plan 09-02 (V-APP-006/007, V-MOD-003)
+Resume file: .paul/HANDOFF-2026-10-08.md
+Resume context:
+- Scratchpad (AtlantisPB clone, standard text, xmlschema venv, api-index) is gone — rebuild per handoff
+- Pending verification fixes: 44642 exemption, PRRD contradiction evidence, clause marks (BAMT ns → NBR 25602)
+- Never commit standard-derived data (licensed copy) or AtlantisPB content (private)
+Git strategy: main
 
 ---
 *STATE.md — Updated after every significant action*
