@@ -16,10 +16,10 @@ See: .paul/PROJECT.md (updated 2026-10-07)
 ## Current Position
 
 Milestone: v0.3 API index, NCL/JSON schemas
-Phase: 10 of 11 (NCL and JSON schemas) — Phase 9 blocked
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-10-07 — Milestone v0.3 created (v0.2.0 released)
+Phase: 10 of 11 (NCL and JSON schemas) — Planning
+Plan: 10-01 created, awaiting approval
+Status: PLAN created, ready for APPLY
+Last activity: 2026-10-07 — Created .paul/phases/10-ncl-json-schemas/10-01-PLAN.md
 
 Progress:
 - v0.3: [░░░░░░░░░░] 0%
@@ -28,12 +28,13 @@ Progress:
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ○        ○        ○     [Ready for first PLAN]
+  ✓        ○        ○     [Plan created, awaiting approval]
 ```
 
 ## Accumulated Context
 
 ### Decisions
+- 2026-10-07: Phase 10 = NCL only; JSON schemas deferred (no reports in repo; need oneOf/unevaluatedProperties/cross-file refs)
 - Official XSDs from AtlantisPB complementary files; xmlschema backend; V-XML-002 passes only clean (Phase 8)
 - 2026-10-07: Wire AtlantisPB-committed NBR 25608 XSDs before v0.2.0 (plan 08-02); release moves to 08-02
 - 2026-10-07: Phase 9 (API index) moves to v0.3
@@ -62,6 +63,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 - Real layout.json shape for test fixture (Phase 1)
 
 ### Blockers/Concerns
+- Official nga preset/switchgroup schemas misspell `minimum` as `minmum` — tell the team
 - JSON Schema subset; unsupported keyword → skip (Phase 3)
 - Card ranges F01-F42 expanded; V-MAN-002 omissions group-scoped (Phase 3)
 - Phase 9 blocked on: api-index.json commit permission (coordinators) + NBR 25608 PDF (Annexes C/D) — not in AtlantisPB, not available here
@@ -79,9 +81,9 @@ Feature branches merged: none
 ## Session Continuity
 
 Last session: 2026-10-07
-Stopped at: Milestone v0.3 created
-Next action: /paul:plan for Phase 10 (NCL and JSON schemas)
-Resume file: .paul/ROADMAP.md
+Stopped at: Plan 10-01 created
+Next action: Approve, then /paul:apply .paul/phases/10-ncl-json-schemas/10-01-PLAN.md
+Resume file: .paul/phases/10-ncl-json-schemas/10-01-PLAN.md
 
 ---
 *STATE.md — Updated after every significant action*

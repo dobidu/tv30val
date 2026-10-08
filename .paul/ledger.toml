@@ -284,3 +284,9 @@ at = "2026-10-07T00:00:00Z"
 action = "milestone_create"
 phase = 10
 at = "2026-10-07T00:00:00Z"
+
+[[entry]]
+action = "plan"
+phase = 10
+plan = "10-01"
+at = "2026-10-07T00:00:00Z"
